@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!-- T O O L B A R -->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <!-- C O N T E N T -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- D E S C R I P T I O N   C O N T E N T -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/image_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:padding="10dp">
+
+                    <!-- T I T L E -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="10"
+                        android:padding="1dp"
+                        android:background="@color/colorPrimary">
+
+                        <!-- L A B E L -->
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:text="@string/title"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:textSize="14sp"
+                            android:padding="10dp"
+                            android:background="@color/colorPrimary"/>
+
+
+                        <!-- F I E L D -->
+                        <EditText
+                            android:id="@+id/title_field"
+                            android:layout_width="0dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="7"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorPrimary"
+                            android:inputType="textCapWords"
+                            android:background="@color/white"
+                            android:gravity="start|center_vertical" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:weightSum="2">
+
+                        <!-- D A T E -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginRight="5dp"
+                            android:orientation="horizontal"
+                            android:weightSum="10"
+                            android:padding="1dp"
+                            android:background="@color/colorPrimary">
+
+                            <!-- L A B E L -->
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2.8"
+                                android:text="@string/date"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:textSize="14sp"
+                                android:padding="7.5dp"
+                                android:background="@color/colorPrimary"/>
+
+                            <!-- F I E L D -->
+                            <TextView
+                                android:id="@+id/date_field"
+                                android:layout_width="0dp"
+                                android:paddingLeft="8dp"
+                                android:paddingRight="8dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="7.2"
+                                android:textSize="14sp"
+                                android:hint="@string/date_hint"
+                                android:textColor="@color/colorPrimary"
+                                android:background="@color/white"
+                                android:gravity="start|center_vertical" />
+
+                        </LinearLayout>
+
+                        <!-- T A G -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="5dp"
+                            android:orientation="horizontal"
+                            android:weightSum="10"
+                            android:padding="1dp"
+                            android:background="@color/colorPrimary">
+
+                            <!-- L A B E L -->
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2.8"
+                                android:text="@string/tag"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:textSize="14sp"
+                                android:padding="7.5dp"
+                                android:background="@color/colorPrimary"/>
+
+                            <!-- F I E L D -->
+                            <Spinner
+                                android:id="@+id/tag_spinner"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="7.2"
+                                android:background="@color/white" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <!-- C O M M E N T -->
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="4dp"
+                        app:cardBackgroundColor="@color/colorPrimary"
+                        app:contentPadding="1dp">
+
+                            <EditText
+                                android:id="@+id/comments_field"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/comments"
+                                android:textColorHint="@color/hint_text_color"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="14sp"
+                                android:inputType="textMultiLine|textCapSentences"
+                                android:lines="8"
+                                android:minLines="3"
+                                android:gravity="top|left"
+                                android:maxLines="10"
+                                android:scrollbars="vertical"
+                                android:background="@drawable/rectangle_editfield"/>
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- A D D   M O R E -->
+            <TextView
+                android:id="@+id/add_more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/white"
+                android:textAllCaps="true"
+                android:padding="10dp"
+                android:text="@string/upload_more"
+                android:drawablePadding="10dp"
+                android:background="@color/colorPrimary"
+                android:drawableLeft="@drawable/ic_add_circle_outline_white_24dp" />
+
+            <!-- U P L O A D E D   I M A G E   T H U M B N A I L -->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/snapshot_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"/>
+
+        </LinearLayout>
+
+
+        <!-- S A V E   F A B -->
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_done_white"
+            app:rippleColor="@color/colorPrimary"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="16dp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
+

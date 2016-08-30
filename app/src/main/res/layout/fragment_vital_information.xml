@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <!-- D A T A -->
+    <data>
+
+        <import
+            type="android.view.View"/>
+
+        <variable
+            name="dataBP"
+            type="com.careons.app.Patient.Database.Models.Vitals.BloodPressure"/>
+
+        <variable
+            name="dataBG"
+            type="com.careons.app.Patient.Database.Models.Vitals.BloodGlucose"/>
+
+        <variable
+            name="dataBMI"
+            type="com.careons.app.Patient.Database.Models.Vitals.BMI"/>
+
+    </data>
+
+    <!-- C O N T E N T -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="20dp">
+
+            <!-- L O A D E R -->
+            <include
+                layout="@layout/item_loader" />
+
+
+            <!-- E M P T Y -->
+            <LinearLayout
+                android:id="@+id/vitals_empty"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="25dp"
+                    android:lineSpacingExtra="3dp"
+                    android:text="@string/empty_vitals_text"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/empty_vitals_cta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:text="@string/empty_vitals"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    android:clickable="true"
+                    android:onClick="gotoVitals"/>
+
+            </LinearLayout>
+
+
+            <!-- V I T A L S   C O N T E N T -->
+            <LinearLayout
+                android:id="@+id/vitals_summary"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- B L O O D   P R E S S U R E -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- H E A D E R -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="@color/light_grey"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="7"
+                            android:text="@string/blood_pressure"
+                            android:gravity="left|center_vertical"
+                            android:textColor="@color/text_color" />
+
+                        <TextView
+                            android:id="@+id/bp_see_more"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="right|center_vertical"
+                            android:text="@string/see_more"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_color"
+                            android:clickable="true"
+                            android:onClick="gotoVitals"/>
+
+                    </LinearLayout>
+
+                    <!-- C A R D -->
+                    <include
+                        layout="@layout/card_vitals_bp"
+                        bind:data="@{dataBP}"/>
+
+                    <!-- E M P T Y -->
+                    <LinearLayout
+                        android:id="@+id/vitals_bp_empty"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="25dp"
+                            android:lineSpacingExtra="3dp"
+                            android:text="@string/empty_vitals_bp_text"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:id="@+id/empty_vitals_bp_cta"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:text="@string/empty_vitals"
+                            android:padding="5dp"
+                            android:textSize="15sp"
+                            android:clickable="true"
+                            android:onClick="gotoVitals"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+
+
+
+                <!-- B L O O D   G L U S O S E -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp">
+
+                    <!-- H E A D E R -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="@color/light_grey"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="7"
+                            android:text="@string/blood_glucose"
+                            android:gravity="left|center_vertical"
+                            android:textColor="@color/text_color" />
+
+                        <TextView
+                            android:id="@+id/bg_see_more"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="right|center_vertical"
+                            android:text="@string/see_more"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_color"
+                            android:clickable="true"
+                            android:onClick="gotoVitals"/>
+
+                    </LinearLayout>
+
+                    <!-- C A R D -->
+                    <include
+                        layout="@layout/card_vitals_bg"
+                        bind:data="@{dataBG}"/>
+
+
+                    <!-- E M P T Y -->
+                    <LinearLayout
+                        android:id="@+id/vitals_bg_empty"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="25dp"
+                            android:lineSpacingExtra="3dp"
+                            android:text="@string/empty_vitals_bg_text"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:id="@+id/empty_vitals_bg_cta"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:text="@string/empty_vitals"
+                            android:padding="5dp"
+                            android:textSize="15sp"
+                            android:clickable="true"
+                            android:onClick="gotoVitals"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+
+
+
+                <!-- B M I  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp">
+
+                    <!-- H E A D E R -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="@color/light_grey"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="7"
+                            android:text="@string/bmi"
+                            android:gravity="left|center_vertical"
+                            android:textColor="@color/text_color" />
+
+                        <TextView
+                            android:id="@+id/bmi_see_more"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="right|center_vertical"
+                            android:text="@string/see_more"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_color"
+                            android:clickable="true"
+                            android:onClick="gotoVitals"/>
+
+                    </LinearLayout>
+
+                    <!-- C A R D -->
+                    <include
+                        layout="@layout/card_vitals_bmi"
+                        bind:data="@{dataBMI}"/>
+
+                    <!-- E M P T Y -->
+                    <LinearLayout
+                        android:id="@+id/vitals_bmi_empty"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="25dp"
+                            android:lineSpacingExtra="3dp"
+                            android:text="@string/empty_vitals_bmi_text"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:id="@+id/empty_vitals_bmi_cta"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:text="@string/empty_vitals"
+                            android:padding="5dp"
+                            android:textSize="15sp"
+                            android:clickable="true"
+                            android:onClick="gotoVitals"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

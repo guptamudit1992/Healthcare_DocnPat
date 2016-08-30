@@ -1,0 +1,31 @@
+<resources>
+
+    <string name="app_name">केरिंग मिल्लिओन्स</string>
+
+    <!-- A C T I V I T Y   T I T L E S -->
+    <string name="title_activity_home"> </string>
+    <string name="sign_up">SIGN UP</string>
+
+    <!-- H O M E   F A B   M E N U -->
+
+
+    <!-- N A V I G A T I O N   D R A W E R -->
+    <string name="navigation_drawer_home">Home</string>
+    <string name="navigation_drawer_vitals">Vitals</string>
+    <string name="navigation_drawer_profile">Profile</string>
+    <string name="navigation_drawer_share">Share</string>
+    <string name="navigation_drawer_about">About Us</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <!-- A C T I O N   B A R -->
+
+
+    <!-- C A R D   S T R I N G   C O N S T A N T S -->
+    <string name="health_book">स्वास्थ्य बुक</string>
+    <string name="health_search">स्वास्थ्य खोजें</string>
+    <string name="card_message">लाखों की देखभाल चिकित्सा डेटा के साथ जुड़े अपने सबसे बुनियादी समस्या पर गौर करेंगे कि नए मेड- टेक स्टार्टअप है।</string>
+
+
+</resources>

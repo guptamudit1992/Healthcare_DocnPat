@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mh"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <!-- T O O L B A R -->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/mh" />
+
+        <!-- C O N T E N T -->
+        <include
+            layout="@layout/fragment_hb_add_medication" />
+
+    </LinearLayout>
+
+</RelativeLayout>
+

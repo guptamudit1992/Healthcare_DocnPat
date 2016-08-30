@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+    android:id="@+id/appbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/home_scrollview"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_marginTop="55dp">
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="10">
+
+            <!-- Banner -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@drawable/banner"/>
+
+
+            <!-- Static Page -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="8"
+                android:orientation="vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="@color/light_grey">
+
+                <!-- Consultations -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Consultations"
+                    android:padding="10dp"
+                    android:textSize="16sp"/>
+
+                <!-- Option 1 - Instant Chat -->
+                <LinearLayout
+                    android:id="@+id/instant_chat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    android:background="@color/white"
+                    android:padding="5dp">
+
+                    <!-- Icon -->
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:padding="10dp"
+                        android:src="@drawable/speed_chat"
+                        android:layout_gravity="start|center_vertical"/>
+
+
+                    <!-- Description -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Instant Consultation"
+                            android:textSize="16sp"
+                            android:paddingBottom="5dp"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="3sp"
+                            android:text="Instantly chat with the doctors about your medical problems, allergies and other issues"
+                            android:textSize="13sp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!-- Option 2 - Chat History -->
+                <LinearLayout
+                    android:id="@+id/consultation_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    android:background="@color/white"
+                    android:padding="5dp"
+                    android:layout_marginTop="1dp">
+
+                    <!-- Icon -->
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:padding="10dp"
+                        android:src="@drawable/chat"
+                        android:layout_gravity="start|center_vertical"/>
+
+
+                    <!-- Description -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Consultation History"
+                            android:textSize="16sp"
+                            android:paddingBottom="5dp"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="3sp"
+                            android:text="Go through your previous sessions with our expert doctors"
+                            android:textSize="13sp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+                <!-- Health Records -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Health Records"
+                    android:padding="10dp"
+                    android:textSize="16sp"/>
+
+
+                <!-- Option 3 - EHR -->
+                <LinearLayout
+                    android:id="@+id/health_records"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    android:background="@color/white"
+                    android:padding="5dp"
+                    android:layout_marginTop="1dp">
+
+                    <!-- Icon -->
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:padding="10dp"
+                        android:src="@drawable/medical_records"
+                        android:layout_gravity="start|center_vertical"/>
+
+
+                    <!-- Description -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Health Records"
+                            android:textSize="16sp"
+                            android:paddingBottom="5dp"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="3sp"
+                            android:text="Create your online health records to access them anywhere, anytime"
+                            android:textSize="13sp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+                <!-- Health Education -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Health Education"
+                    android:padding="10dp"
+                    android:textSize="16sp"/>
+
+
+                <!-- Option 4 - Patient Education -->
+                <LinearLayout
+                    android:id="@+id/health_education"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    android:background="@color/white"
+                    android:padding="5dp"
+                    android:layout_marginTop="1dp">
+
+                    <!-- Icon -->
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:padding="10dp"
+                        android:src="@drawable/doc"
+                        android:layout_gravity="start|center_vertical"/>
+
+
+                    <!-- Description -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Get Aware and Get Knowledge"
+                            android:textSize="16sp"
+                            android:paddingBottom="5dp"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="3sp"
+                            android:text="Access our online health database to check up on your medical problems, medicines or allergies"
+                            android:textSize="13sp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

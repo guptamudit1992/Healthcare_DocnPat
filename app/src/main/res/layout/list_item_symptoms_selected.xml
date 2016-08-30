@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- M O D E L   D A T A -->
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="data"
+            type="com.careons.app.Patient.Database.Models.Consultation.Consultation" />
+
+    </data>
+
+
+    <!-- C O N T E N T -->
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="1dp">
+
+        <TextView
+            android:id="@+id/symptom_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{data.name}"
+            android:padding="5dp"
+            android:textSize="13sp"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/white"/>
+
+    </android.support.v7.widget.CardView>
+
+
+</layout>

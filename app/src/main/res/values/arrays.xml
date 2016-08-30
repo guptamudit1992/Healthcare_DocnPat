@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="healthbook_male">
+        <item>Medical Problems</item>
+        <item>Allergies</item>
+        <item>Family History</item>
+        <item>Medication</item>
+        <item>Lifestyle</item>
+        <item>Surgical History</item>
+        <item>Childhood History</item>
+    </string-array>
+
+    <string-array name="healthbook_female">
+        <item>Medical Problems</item>
+        <item>Allergies</item>
+        <item>Family History</item>
+        <item>Medication</item>
+        <item>Lifestyle</item>
+        <item>Surgical History</item>
+        <item>Childhood History</item>
+        <item>Pregnancy</item>
+        <item>Gynaecology History</item>
+    </string-array>
+
+    <string-array name="tags">
+        <item>Bills</item>
+        <item>Medicines</item>
+        <item>Lab Reports</item>
+        <item>Prescription</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>Select Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="blood_group">
+        <item>Select Blood Group</item>
+        <item>A Positive</item>
+        <item>A Negative</item>
+        <item>B Positive</item>
+        <item>B Negative</item>
+        <item>AB Positive</item>
+        <item>AB Negative</item>
+        <item>O Positive</item>
+        <item>O Negative</item>
+    </string-array>
+
+    <string-array name="sort">
+        <item>By Latest</item>
+        <item>By Oldest</item>
+    </string-array>
+
+    <string-array name="duration">
+        <item>Select Duration</item>
+        <item>1 Hour</item>
+        <item>Few Hours</item>
+        <item>1 Day</item>
+        <item>2 Days</item>
+        <item>3 Days</item>
+        <item>4 Days</item>
+        <item>5 Days</item>
+        <item>6 Days</item>
+        <item>1 Week</item>
+        <item>2 Weeks</item>
+        <item>3 Weeks</item>
+        <item>1 Month</item>
+        <item>2 Months</item>
+        <item>3 Months</item>
+        <item>6 Months</item>
+        <item>1 Year</item>
+        <item>2 Years</item>
+        <item>3 Years</item>
+        <item>4 Years</item>
+        <item>5 Years</item>
+        <item>6 Years</item>
+        <item>7 Years</item>
+        <item>8 Years</item>
+        <item>9 Years</item>
+        <item>More than 10 Years</item>
+    </string-array>
+
+    <string-array name="units">
+        <item>Select Unit</item>
+        <item>tab(s)</item>
+        <item>cap(s)</item>
+        <item>mg</item>
+        <item>g</item>
+        <item>mcg</item>
+        <item>mEq</item>
+        <item>ml</item>
+        <item>Tbsp</item>
+        <item>tsp</item>
+        <item>inhalation(s)</item>
+        <item>puff(s)</item>
+        <item>neb(s)</item>
+        <item>spray(s)</item>
+        <item>L</item>
+        <item>lozenge</item>
+        <item>ng</item>
+        <item>pack(s)</item>
+        <item>pocket(s)</item>
+        <item>pad</item>
+        <item>patch(es)</item>
+    </string-array>
+
+    <string-array name="frequency">
+        <item>Select Frequency</item>
+        <item>once</item>
+        <item>once a day</item>
+        <item>2 times a day</item>
+        <item>3 times a day</item>
+        <item>4 times a day</item>
+        <item>once a week</item>
+        <item>2 times a week</item>
+        <item>3 times a week</item>
+        <item>once a month</item>
+        <item>once a week</item>
+        <item>as required</item>
+    </string-array>
+
+    <string-array name="doses">
+        <item>Select Dose</item>
+        <item>0.1</item>
+        <item>0.25</item>
+        <item>0.5</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+        <item>60</item>
+        <item>70</item>
+        <item>80</item>
+        <item>90</item>
+        <item>125</item>
+        <item>150</item>
+        <item>175</item>
+        <item>200</item>
+        <item>225</item>
+        <item>250</item>
+        <item>275</item>
+        <item>300</item>
+        <item>400</item>
+        <item>500</item>
+        <item>600</item>
+        <item>700</item>
+        <item>750</item>
+        <item>875</item>
+        <item>1000</item>
+    </string-array>
+
+    <string-array name="kind_of_reaction">
+        <item>Select Reaction</item>
+        <item>Nasal congestion</item>
+        <item>Itching</item>
+        <item>Sneezing</item>
+        <item>A runny nose</item>
+        <item>Headaches</item>
+        <item>Coughing and wheezing</item>
+        <item>Congestion</item>
+        <item>Dizziness</item>
+        <item>Itchy, scaly rashes and hives</item>
+        <item>Sensitivity to certain chemicals, perfumes and paints</item>
+        <item>Others</item>
+    </string-array>
+
+
+</resources>

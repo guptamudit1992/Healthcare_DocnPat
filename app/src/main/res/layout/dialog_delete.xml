@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <!-- C A N C E L -->
+    <ImageView
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:padding="5dp"
+        android:src="@drawable/cance_ececec"/>
+
+
+    <!-- C O N T E N T -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <!-- I M A G E -->
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:layout_gravity="start"
+            android:src="@drawable/dp5"
+            android:background="@color/light_grey"/>
+
+
+        <!-- C O N T E N T -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <!-- T I T L E -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                android:text="@string/dialog_delete_title"
+                android:layout_marginBottom="10dp" />
+
+            <!-- D E S C R I P T I O N   T E X T -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_delete"
+                android:textColor="@color/grey"
+                android:lineSpacingExtra="5sp"
+                android:textSize="13sp"
+                android:gravity="start"/>
+
+
+            <!-- A C T I O N   B U T T O N -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="35dp">
+
+                <!-- C A N C E L -->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cta_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="0dp"
+                    android:layout_margin="5dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/light_grey">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cancel"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:textColor="@color/text_color"
+                        android:layout_margin="1dp"
+                        android:background="@color/white"/>
+
+                </android.support.v7.widget.CardView>
+
+
+
+                <!-- A C C E P T -->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cta_accept"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="5dp"
+                    android:layout_margin="5dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/colorPrimary">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/action_delete"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:textColor="@color/white"
+                        android:layout_margin="1dp"
+                        android:background="@color/colorPrimary"/>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

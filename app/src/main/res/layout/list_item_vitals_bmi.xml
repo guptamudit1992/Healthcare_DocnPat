@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- D A T A -->
+    <data>
+
+        <variable
+            name="handlers"
+            type="com.careons.app.Patient.Database.Handlers.Vitals.BMIHandler"/>
+
+        <variable
+            name="data"
+            type="com.careons.app.Patient.Database.Models.Vitals.BMI"/>
+
+    </data>
+
+
+    <!-- C O N T E N T -->
+    <LinearLayout
+        android:id="@+id/vitals_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="1dp"
+        android:background="@color/light_grey">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="10"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:padding="10dp">
+
+            <!-- D A T A -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:orientation="vertical">
+
+                <!-- D A T E -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{data.date}"
+                    android:textColor="@color/text_color"
+                    android:textSize="12sp"
+                    android:paddingBottom="5dp"/>
+
+                <!-- V A L U E -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{data.bmi}"
+                    android:gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/text_color"/>
+
+                <!-- T A G -->
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    app:cardCornerRadius="3dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor='@{data.tag.equals(@string/normal) ? @color/normal : (data.tag.equals(@string/overweight) ? @color/high : @color/alarming)}'>
+
+                    <TextView
+                        android:id="@+id/tag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{data.tag}"
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:textSize="11sp"
+                        android:textColor="@color/white" />
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <!-- A C T I O N -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:orientation="horizontal"
+                android:gravity="right">
+
+                <!-- E D I T -->
+                <ImageView
+                    android:id="@+id/update_imageView"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_hb_edit"
+                    android:clickable="true"
+                    android:tag="@{data.bmiId}"
+                    android:onClick="@{handlers.onUpdate}"/>
+
+                <!-- D E L E T E -->
+                <ImageView
+                    android:id="@+id/delete_imageView"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_hb_delete"
+                    android:clickable="true"
+                    android:tag="@{data.bmiId}"
+                    android:onClick="@{handlers.onDelete}"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

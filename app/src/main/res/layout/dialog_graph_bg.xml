@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/card_gradient_dark_grey"
+    android:padding="5dp">
+
+    <!-- D A T E -->
+    <TextView
+        android:id="@+id/dialog_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/white"/>
+
+    <!-- H E A D E R -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textSize="12sp"
+        android:text="@string/vitals_bg_text"/>
+
+    <!-- V A L U E -->
+    <TextView
+        android:id="@+id/dialog_bg_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="24sp"/>
+
+</LinearLayout>

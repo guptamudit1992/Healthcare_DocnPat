@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Patient.Activity.Chat.UploadChatConfirmActivity">
+
+    <!-- T O O L B A R -->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        app:elevation="0.1dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/toolbar_dropshadow_rotate"
+            app:elevation="0dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <!-- D E S C R I P T I O N -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mdtp_dark_gray">
+
+
+        <!-- I M A G E -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_above="@+id/image_desc">
+
+            <ImageView
+                android:id="@+id/chat_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside" />
+
+        </LinearLayout>
+
+
+        <!-- I M A G E   D E T A I L S -->
+        <LinearLayout
+            android:id="@+id/image_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#70000000"
+            android:padding="20dp"
+            android:layout_above="@+id/cta_layout">
+
+            <!-- T I T L E -->
+            <EditText
+                android:id="@+id/chat_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:hint="@string/chat_title_hint"
+                android:textColorHint="@color/light_grey"
+                android:textColor="@color/light_grey"
+                android:inputType="textCapWords"
+                android:maxLength="35"/>
+
+
+            <!-- H I N T   O N   S A V E -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/light_grey"
+                android:textSize="12sp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/chat_save_hint"/>
+
+        </LinearLayout>
+
+
+        <!-- A C T I O N   B A R -->
+        <LinearLayout
+            android:id="@+id/cta_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:background="#939090"
+            android:paddingTop="0.1dp"
+            android:divider="@drawable/divider_dark"
+            android:showDividers="middle"
+            android:layout_alignParentBottom="true">
+
+            <!--- C A N C E L -->
+            <TextView
+                android:id="@+id/cta_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/cancel"
+                android:textColor="@color/light_grey"
+                android:textSize="13sp"
+                android:padding="10dp"
+                android:gravity="center"
+                android:onClick="signupRequest"
+                android:background="@color/mdtp_dark_gray"/>
+
+            <!--- S E N D -->
+            <TextView
+                android:id="@+id/cta_send"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/send"
+                android:textAllCaps="true"
+                android:textSize="13sp"
+                android:padding="10dp"
+                android:textColor="#282727"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="loginRequest"
+                android:background="#eceded"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.careons.app"
+    android:installLocation="auto"> <!-- A N D R O I D   V E R S I O N S -->
+    <uses-sdk
+        android:maxSdkVersion="23"
+        android:minSdkVersion="15"
+        android:targetSdkVersion="23" />
+
+    <!-- P E R M I S S I O N S -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:maxSdkVersion="18"
+        android:required="true" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!-- A P P L I C A T I O N -->
+    <application
+        android:name=".Patient.Commons.AppManager"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- S P L A S H   A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Splash.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- A P P   O N B O A R D I N G   A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Onboarding.AppOnboardingActivity"
+            android:label="@string/title_activity_app_onboarding"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- L O G I N   A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Signup.LoginActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_home"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- S I G N U P   A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Signup.SignUpActivity"
+            android:label="@string/title_activity_user_signup"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- C R E A T E   A C C O U N T   A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Signup.CreateAccountActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- F O R G O T   P A S S W O R D   A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Signup.ForgotPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- W E L C O M E   S C R E E N   A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Signup.WelcomeActivity"
+            android:label="@string/title_activity_user_signup"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- O N B O A R D I N G   M E D I C A L   P R O B L E M   A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Onboarding.OnboardingMedicalProblemsActivity"
+            android:label="@string/title_activity_onboarding_medical_problems"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- O N B O A R D I N G   F A M I L Y   H I S T O R Y   A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Onboarding.OnboardingFamilyHistoryActivity"
+            android:label="@string/title_activity_onboarding_family_history"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- O N B O A R D I N G   L I F E S T Y L E   A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Onboarding.OnboardingLifestyleActivity"
+            android:label="@string/title_activity_onboarding_lifestyle"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- O N B O A R D I N G   G Y N A E L O G I C A L   I S S U E S   A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Onboarding.OnboardingGynaecologicalIssuesActivity"
+            android:label="@string/title_activity_onboarding_gynaecological_issues"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- O N B O A R D I N G   L I S T -->
+        <activity
+            android:name=".Patient.Activity.Onboarding.OnboardingListActivity"
+            android:label="@string/title_activity_onboarding_list"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- M A I N   A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Main.MainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_home"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- H E A L T H B O O K   A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Main.HealthBook.HealthbookActivity"
+            android:label="@string/health_book"
+            android:parentActivityName=".Patient.Activity.Main.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Patient.Activity.Main.MainActivity" />
+        </activity>
+
+        <!-- S E A R C H   A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Main.HealthSearch.SearchActivity"
+            android:label="@string/title_activity_search"
+            android:parentActivityName=".Patient.Activity.Main.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateVisible">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Patient.Activity.Main.MainActivity" />
+        </activity>
+
+        <!-- W E B V I E W   A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Main.HealthSearch.WebViewActivity"
+            android:hardwareAccelerated="true"
+            android:label="@string/title_activity_web_view"
+            android:parentActivityName=".Patient.Activity.Main.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Patient.Activity.Main.MainActivity" />
+        </activity>
+
+        <!-- Q U I C K   U P L O A D   A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Main.QuickUpload.QuickUploadActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:parentActivityName=".Patient.Activity.Main.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Patient.Activity.Main.MainActivity" />
+        </activity>
+
+        <!-- G A L L E R Y   A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Main.UploadedDocuments.GalleryActivity"
+            android:parentActivityName=".Patient.Activity.Main.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Patient.Activity.Main.MainActivity" />
+        </activity>
+
+        <!-- G A L L E R Y   G R I D   A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Main.UploadedDocuments.GalleryGridActivity"
+            android:label="@string/title_activity_gallery_detail"
+            android:parentActivityName=".Patient.Activity.Main.UploadedDocuments.GalleryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Patient.Activity.Main.UploadedDocuments.GalleryActivity" />
+        </activity>
+
+        <!-- G A L L E R Y   D E T A I L   A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Main.UploadedDocuments.GalleryDetailActivity"
+            android:label="@string/title_activity_gallery_detail"
+            android:parentActivityName=".Patient.Activity.Main.UploadedDocuments.GalleryGridActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Patient.Activity.Main.UploadedDocuments.GalleryGridActivity" />
+        </activity>
+
+        <!-- A D D   M E D I C A L  P R O B L E M   A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Main.HealthBook.AddMedicalProblemActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- A D D   A L L E R G Y   A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Main.HealthBook.AddAllergyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- A D D   M E D I C A T I O N   A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Main.HealthBook.AddMedicationHistoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- A D D   C H I L D H O O D   H I S T O R Y  A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Main.HealthBook.AddChildhoodActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- A D D   S U R G I C A L   H I S T R Y  A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Main.HealthBook.AddSurgicalActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- A D D   G Y N A E C O L O G I C A L  A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Main.HealthBook.AddGynaecologicalActivity"
+            android:parentActivityName=".Patient.Activity.Main.HealthBook.HealthbookActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- A D D   F A M I L Y  A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Main.HealthBook.AddFamilyActivity"
+            android:parentActivityName=".Patient.Activity.Main.HealthBook.HealthbookActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- C H A N G E   P A S S W O R D   A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Others.ChangePasswordActivity"
+            android:label="@string/title_activity_change_password"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- F A C E B O O K   A P I   A C T I V I T Y -->
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- F A C E B O O K   A P P   I D -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <!-- G O O G L E   A P I -->
+        <meta-data
+            android:name="google-signin-client_id"
+            android:value="@string/google_client_id" />
+
+        <!-- F A B R I C   C R A S H L Y T I C S   S E R V I C E -->
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="d25cb65d387b0441d52c3a4ffe7766550ae7ed41" />
+
+        <!-- M I X P A N E L -->
+        <activity android:name="com.mixpanel.android.surveys.SurveyActivity" />
+
+        <!-- S U G A R   O R M   M E T A   D A T A -->
+        <meta-data
+            android:name="DATABASE"
+            android:value="com.careons.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="9" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="com.careons" />
+
+        <!-- E H R   A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Main.EHRActivity"
+            android:label="@string/title_activity_health_records"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- E D U C A T I O N    A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Main.EducationActivity"
+            android:label="@string/title_activity_health_education"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- C O N S U L T A T I O N    P E R S O N    A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Consultation.ConsultationPersonActivity"
+            android:label="@string/title_activity_consultation_person"
+            android:parentActivityName=".Patient.Activity.Main.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.careons.app.Patient.Activity.Main.MainActivity" />
+        </activity>
+
+        <!-- C O N S U L T A T I O N    F O R M    A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Consultation.ConsultationFormActivity"
+            android:label="@string/title_activity_consultation_form"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- C O N S U L T A T I O N    P R O B L E M    A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Consultation.ConsultationProblemActivity"
+            android:label="@string/title_activity_consultation_problem"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- C O N S U L T A T I O N    D E S C R I P T I O N    A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Consultation.ConsultationDescriptionActivity"
+            android:label="@string/title_activity_consultation_description"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- C O N S U L T A T I O N    L O A D E R    A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Consultation.ConsultationLoaderActivity"
+            android:label="@string/title_activity_consultation_loader"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- C O N S U L T A T I O N    D O C T O R    A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Consultation.ConsultationDoctorActivity"
+            android:label="@string/title_activity_consultation_doctor"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- C O N S U L T A T I O N    H I S T O R Y    A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Consultation.ConsultationHistoryActivity"
+            android:label="@string/title_activity_consultation_history"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- C H A T   A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Chat.ChatActivity"
+            android:label="@string/title_activity_chat"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- U P L O A D   C H A T   I M A G E   A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Chat.UploadChatConfirmActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- V I E W   C H A T   I M A G E   A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Chat.ViewChatImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- R A T E   A N D   R E V I E W    A C T I V I T Y -->
+        <activity
+            android:name=".Patient.Activity.Chat.RateChatActivity"
+            android:label="@string/title_activity_chat_rate"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+    </application>
+
+</manifest>

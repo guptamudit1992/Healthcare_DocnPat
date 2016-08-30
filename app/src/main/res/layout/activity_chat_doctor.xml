@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".Patient.Activity.Chat.ChatActivity">
+
+    <!-- Patient Basic -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:padding="5dp"
+        android:background="@color/colorPrimaryDoctor">
+
+        <!-- Profile Pic -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_image"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            app:civ_border_width="1dp"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            app:civ_border_color="@color/light_grey"
+            android:src="@drawable/mudit_dp" />
+
+
+        <!-- Basic -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:padding="5dp">
+
+            <!-- Name -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mudit Gupta"
+                android:textSize="13sp"
+                android:textColor="@color/white"/>
+
+            <!-- Status -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Online"
+                android:textColor="@color/white"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+
+
+        <!-- Attach Image -->
+        <ImageView
+            android:id="@+id/chat_upload_doc"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:rotation="45"
+            android:src="@drawable/ic_attach_file_white"/>
+
+
+        <!-- End Chat -->
+        <ImageView
+            android:id="@+id/chat_end"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:src="@drawable/ic_end_chat"/>
+
+    </LinearLayout>
+
+
+
+    <!-- C H A T   S Y S T E M -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical">
+
+        <!-- D O C T O R   W I N D O W -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- C H A T   W I N D O W -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/doc_send_chat_layout"
+                android:padding="5dp">
+
+                <!-- C H A T  H I S T O R Y -->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/doc_chat_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+            <!-- S E N D   C H A T -->
+            <LinearLayout
+                android:id="@+id/doc_send_chat_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                android:layout_alignParentBottom="true"
+                android:background="#939090"
+                android:paddingTop="0.1dp"
+                android:divider="@drawable/divider_dark"
+                android:showDividers="middle">
+
+                <!-- C H A T   B O X -->
+                <EditText
+                    android:id="@+id/doc_chat_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:hint="Type Your Message here ..."
+                    android:padding="12.5dp"
+                    android:textSize="13sp"
+                    android:inputType="textCapSentences"
+                    android:background="@color/white"/>
+
+                <!-- S E N D   B U T T O N -->
+                <ImageView
+                    android:id="@+id/doc_send_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@color/white"
+                    android:padding="5dp"
+                    android:src="@drawable/doc_send"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

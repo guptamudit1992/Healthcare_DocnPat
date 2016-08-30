@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- P R I M A R Y   C O L O R S -->
+    <color name="colorPrimary">#db5860</color>
+    <color name="colorPrimaryDark">#b7535f</color>
+    <color name="colorPrimaryDoctor">#2a5494</color>
+    <color name="colorPrimaryDarkDoctor">#3460a3</color>
+    <color name="colorAccent">#2a66b0</color>
+
+
+
+    <!-- B A S I C   C O L O R S -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="text_color">#6b6b6b</color>
+    <color name="hint_text_color">#b5b5b5</color>
+    <color name="grey">#8b8b8b</color>
+    <color name="light_grey">#ececec</color>
+    <color name="transparent">#00000000</color>
+    <color name="yellow">#f3f2d306</color>
+    <color name="lightblue">#c9d9ed</color>
+    
+    
+    <!-- L O G I N / S I G N U P   C O L O R S -->
+    <color name="card_gradient_dark_grey">#131313</color>
+    <color name="card_gradient_light_grey">#272727</color>
+    <color name="card_light_grey">#1f1f1f</color>
+    <color name="card_text_color">#9c9c9c</color>
+    <color name="card_login">@color/colorPrimary</color>
+    <color name="card_signup">#fb8b02</color>
+
+
+    <!-- S T A T U S   C O L O R S -->
+    <color name="active">#07bd1c</color>
+    <color name="inactive">#aaaaaa</color>
+
+    <!-- F A B   C O L O R S -->
+    <color name="fab_yellow">#FCB305</color>
+
+
+    <!-- C A R D   C O L O R S -->
+
+
+    <!-- O N B O A R D I N G   L I S T -->
+    <color name="onboarding_pink">#fe6149</color>
+    <color name="onboarding_green">#189A71</color>
+    <color name="onboarding_blue">#04a0c3</color>
+    <color name="onboarding_yellow">#fb8b02</color>
+
+
+    <!-- M E D I C A L   O N B O A R D I N G -->
+    <color name="onb_fs">#244c5e</color>
+
+
+    <!-- H E A L T H B O O K   C A R D -->
+    <color name="hb_mp_card">@color/colorPrimary</color>
+    <color name="hb_al_card">#ac6c1e</color>
+    <color name="hb_sh_card">#46b56a</color>
+    <color name="hb_fh_card">#244c5e</color>
+    <color name="hb_gh_card">#c24b97</color>
+    <color name="hb_mh_card">#04c8fa</color>
+    <color name="hb_lf_card">#2866b2</color>
+    <color name="hb_preg_card">#f99dcd</color>
+    <color name="hb_ph_card">#73d5f9</color>
+
+
+    <!-- H E A L T H   B O O K   C O L O R S -->
+    <color name="mp">#fe6149</color>
+    <color name="al">#ac6c1e</color>
+    <color name="fh">#244c5e</color>
+    <color name="mh">#04c8fa</color>
+    <color name="lf">#2866b2</color>
+    <color name="sh">#46b56a</color>
+    <color name="preg">#f99dcd</color>
+    <color name="ch">#73d5f9</color>
+    <color name="gh">#c24b97</color>
+
+
+    <!-- S T A T U S   B A R   C O L O R S -->
+    <color name="darker_mp">#fb472b</color>
+    <color name="darker_al">#885516</color>
+    <color name="darker_fh">#17323e</color>
+    <color name="darker_mh">#00a7d1</color>
+    <color name="darker_lf">#1f528f</color>
+    <color name="darker_sh">#3b9a5a</color>
+    <color name="darker_preg">#e388b8</color>
+    <color name="darker_ch">#4fb3d7</color>
+    <color name="darker_gh">#ad3682</color>
+
+
+    <color name="black_overlay">#66000000</color>
+    <color name="guide_black_overlay">#90000000</color>
+
+
+
+    <color name="hb_medical_problem">#fe6149</color>
+    <color name="hb_surgical_history">#46b56a</color>
+    <color name="hb_medication_history">#828182</color>
+    <color name="hb_gynaecological_issue">#c24b97</color>
+    <color name="hb_childhood_history">#73d5f9</color>
+    <color name="hb_family_history">#244c5e</color>
+    <color name="hb_allergy">#ac6c1e</color>
+    <color name="hb_pregnancy">#f99dcd</color>
+    <color name="hb_lifestyle">#2866b2</color>
+
+
+    <!-- V I T A L   R A N G E S -->
+    <color name="normal">#07bd1c</color>
+    <color name="high">#f18c20</color>
+    <color name="alarming">#db5860</color>
+    <color name="vitals_bp_diastolic">#34bc0d</color>
+    <color name="vitals_bmi_orange">#f18c20</color>
+
+
+    <!-- D A I L O G  B U T T O N   T E X T  C O L O R -->
+    <color name="dialog_negative_btn_text">#9c9c9c</color>
+    <color name="dialog_positive_btn_text">#db5860</color>
+
+</resources>

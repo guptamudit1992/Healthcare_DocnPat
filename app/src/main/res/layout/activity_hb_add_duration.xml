@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <!-- T O O L B A R -->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lf" />
+
+        <!-- S E A R C H   B A R -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lf"
+            android:orientation="horizontal"
+            android:padding="1dp"
+            android:weightSum="10">
+
+            <!-- S E A R C H   L A B E L -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="@color/lf"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="SEARCH"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+
+            <!-- S E A R C H   F I E L D -->
+            <EditText
+                android:id="@+id/editTextSearch"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:background="@color/white"
+                android:hint="Start typing here ..."
+                android:padding="10dp"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- S E A R C H   C O N T E N T -->
+    <LinearLayout
+        android:id="@+id/middleLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchLayout"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <!-- S E A R C H  D U R A T I O N -->
+        <ListView
+            android:id="@+id/listViewSerachMP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+</RelativeLayout>
+

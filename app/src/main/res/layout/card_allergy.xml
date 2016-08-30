@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- M O D E L   D A T A -->
+    <data>
+
+        <variable
+            name="data"
+            type="com.careons.app.Patient.Database.Models.Healthbook.Allergy" />
+
+        <variable
+            name="handlers"
+            type="com.careons.app.Patient.Database.Handlers.Healthbook.AllergyHandler" />
+
+    </data>
+
+    <!-- C O N T E N T -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey"
+        android:orientation="vertical"
+        android:paddingBottom="1dp">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/medical_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/al"
+            app:elevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!-- T O O L B A R -->
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/card_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:onClick="@{handlers.toggleContent}">
+
+                    <!-- T I T L E -->
+                    <TextView
+                        android:id="@+id/toolbar_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/status_active"
+                        android:drawablePadding="10dp"
+                        android:text="@{data.allergyName}"
+                        android:textColor="@color/text_color"
+                        android:textSize="16sp" />
+
+                </android.support.v7.widget.Toolbar>
+
+
+                <!-- C A R D  C O N T E N T -->
+                <LinearLayout
+                    android:id="@+id/card_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="vertical">
+
+                    <!-- E X P A N D A B L E   C O N T E N T -->
+                    <LinearLayout
+                        android:id="@+id/view_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="10dp"
+                                android:text="@string/allergy_type"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+                            <!-- A L L E R G Y  N A M E -->
+                            <TextView
+                                android:id="@+id/allergyTypeTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:gravity="right"
+                                android:padding="10dp"
+                                android:text="@{data.type}"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="7"
+                                android:padding="10dp"
+                                android:text="@string/al_1"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/kindOfReactionTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:gravity="right"
+                                android:padding="10dp"
+                                android:singleLine="true"
+                                android:text="@{data.reaction}"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <!-- D A T E   O F   O N S E T -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="10">
+
+                                <TextView
+                                    android:id="@+id/child_list_don_title_text_view"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="6"
+                                    android:padding="10dp"
+                                    android:text="@string/al_2"
+                                    android:textColor="@color/white"
+                                    android:textSize="15sp" />
+
+                                <TextView
+                                    android:id="@+id/child_list_don_text_view"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="4"
+                                    android:gravity="right"
+                                    android:padding="10dp"
+                                    android:text="@{data.startDate}"
+                                    android:textColor="@color/white" />
+
+                            </LinearLayout>
+
+
+                            <!-- C O M M E N T S -->
+                            <TextView
+                                android:id="@+id/disp_comments"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/rectangle_editfield"
+                                android:gravity="top|left"
+                                android:hint="@string/comments"
+                                android:inputType="textMultiLine"
+                                android:lines="8"
+                                android:maxLines="10"
+                                android:minLines="3"
+                                android:padding="10dp"
+                                android:scrollbars="vertical"
+                                android:text="@{data.comment}"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <!-- L O A D E R -->
+                    <!--include
+                        layout="@layout/loader" /-->
+
+
+                    <!-- U P D A T E -->
+                    <LinearLayout
+                        android:id="@+id/update_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="10dp"
+                                android:text="@string/allergy_type"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+                            <!-- A L L E R G Y  N A M E -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:gravity="right"
+                                android:padding="10dp"
+                                android:text="@{data.type}"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="6"
+                                android:padding="10dp"
+                                android:text="@string/al_1"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                            <Spinner
+                                android:id="@+id/kindOfReaction_spinner"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:spinnerMode="dropdown" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:padding="10dp"
+                                android:text="@string/al_3"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/update_date"
+                                style="@android:style/Widget.EditText"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:drawableRight="@drawable/ic_white_datepicker"
+                                android:drawablePadding="10dp"
+                                android:gravity="center_vertical|right"
+                                android:padding="10dp"
+                                android:text="@{data.startDate}"
+                                android:textColor="@color/white"
+                                android:background="@color/al"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <!-- C O M M E N T S -->
+                        <EditText
+                            android:id="@+id/update_comments"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/rectangle_editfield"
+                            android:gravity="top|left"
+                            android:hint="@string/comments"
+                            android:textColorHint="@color/hint_text_color"
+                            android:inputType="textMultiLine"
+                            android:lines="8"
+                            android:maxLines="10"
+                            android:minLines="3"
+                            android:padding="10dp"
+                            android:maxLength="180"
+                            android:scrollbars="vertical"
+                            android:text="@{data.comment}"
+                            android:textSize="14sp" />
+
+
+                        <!-- H Y P E R L I N K -->
+                        <TextView
+                            android:id="@+id/hyperlink"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@{data.hyperlink}"/>
+
+                        <!-- S A V E -->
+                        <TextView
+                            android:id="@+id/save_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            android:background="@drawable/rectangle_editfield"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:onClick="@{handlers.save}"
+                            android:padding="10dp"
+                            android:elevation="2dp"
+                            android:text="@string/save_changes"
+                            android:textColor="@color/al" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</layout>
+

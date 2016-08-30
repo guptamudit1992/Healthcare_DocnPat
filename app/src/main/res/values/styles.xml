@@ -1,0 +1,95 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorControlNormal">@color/light_grey</item>
+
+        <!-- W I N D O W   F U L L S C R E E N -->
+        <!--item name="android:windowFullscreen">true</item-->
+        <!--item name="android:windowActionBar">false</item-->
+
+        <!-- V I E W   P A G E   I N D I C A T O R   C I R C L E -->
+        <item name="vpiCirclePageIndicatorStyle">@style/CustomCirclePageIndicator</item>
+    </style>
+
+
+    <!-- Base application theme. -->
+    <style name="AppThemeDoctor" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryDoctor</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkDoctor</item>
+        <item name="colorAccent">@color/colorPrimaryDoctor</item>
+        <item name="colorControlNormal">@color/white</item>
+
+        <!-- W I N D O W   F U L L S C R E E N -->
+        <!--item name="android:windowFullscreen">true</item-->
+        <!--item name="android:windowActionBar">false</item-->
+
+        <!-- V I E W   P A G E   I N D I C A T O R   C I R C L E -->
+        <item name="vpiCirclePageIndicatorStyle">@style/CustomCirclePageIndicator</item>
+    </style>
+
+
+    <style name="AppThemeDoctor.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <!-- T O O L B A R   T E X T -->
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- C U S T O M   S T Y L E S -->
+
+
+    <!-- V I E W   P A G E   I N D I C A T O R   C I R C L E -->
+    <style name="CustomCirclePageIndicator">
+        <item name="fillColor">@color/light_grey</item>
+        <item name="strokeColor">@color/light_grey</item>
+        <item name="radius">5dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="centered">true</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+
+    <!-- L O G I N -->
+    <style name="auth_card_title">
+        <item name="android:background">@drawable/auth_card_header_gradient</item>
+        <item name="android:textColor">@color/card_text_color</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">15dp</item>
+    </style>
+
+</resources>

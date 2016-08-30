@@ -1,0 +1,948 @@
+<resources>
+
+    <string name="app_name">Careons</string>
+    <string name="doctor_app_name">Doctor Careons</string>
+
+    <!-- A C T I V I T Y   T I T L E S -->
+    <string name="title_activity_home">Careons</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="congrats">Congratulations</string>
+    <string name="logged">You are successfully logged in</string>
+    <string name="welcome_onboarding_text">Kindly gather all your paper medical records for one last time and provide all your health information over the next few screens.</string>
+    <string name="continue_onboarding">Lets Get Started</string>
+    <string name="share">Invite Your Friends</string>
+    <string name="short_desc"> Organize your health information, digitalize your medical records and get customised education about your health concerns with CAREONS </string>
+    <string name="rate">Rate Us on Play Store</string>
+    <string name="about_careons">About Careons</string>
+
+
+    <!-- N A V I G A T I O N   D R A W E R -->
+    <string name="navigation_drawer_home">Home</string>
+    <string name="navigation_drawer_vitals">Vitals</string>
+    <string name="navigation_drawer_ud">Uploaded Documents</string>
+    <string name="navigation_drawer_profile">Profile</string>
+    <string name="navigation_drawer_logout">Logout</string>
+    <string name="navigation_drawer_share">Share</string>
+    <string name="navigation_drawer_about">About Us</string>
+    <string name="navigation_drawer_legal">Terms and Conditions</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <!-- L O G I N   S C R E E N  -->
+    <string name="user_login">Login</string>
+    <string name="signin">Sign in</string>
+    <string name="signup">Sign up</string>
+    <string name="password">Password</string>
+    <string name="send">Send</string>
+    <string name="confirm">Confirm</string>
+    <string name="done">Done</string>
+    <string name="backToLogin">Go back to Login</string>
+    <string name="forgot_password_success">You password has been retrieved and send to your email id</string>
+    <string name="login_email">Email</string>
+    <string name="create_account">Create Account</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="retrieving_pwd">Retrieving Password ...</string>
+    <string name="signing_in_message">Signing in ...</string>
+    <string name="changing_password_message">Changing Password ...</string>
+    <string name="creating_account_message">Creating Account ...</string>
+    <string name="completing_profile_message">Completing Profile ...</string>
+    <string name="syncing_message">Syncing Data ...</string>
+    <string name="fetching_data_message">Fetching Data ...</string>
+    <string name="welcome_message">Preparing for the best app experience ...</string>
+    <string name="fetching_doc">Fetching Image  ...</string>
+    <string name="uploading_doc">Uploading  ...</string>
+    <string name="try_again_in_sometime">Please try again in some time</string>
+    <string name="about">Careons (v1.0.9) is an easy-to-use app that helps you organize your health information and records and improve health care productivity.
+        \n\nCareons is a comprehensive record-keeping and patient education app for your personal medical information designed to fit your busy schedule.
+        \n\nIts the perfect replacement for unreliable paper records or various electronic systems that hold bits and pieces of your medical history.
+        \n\nWith Careons, any and all information that is important to you is kept together in one place.
+
+        \n\n<b>Medical record and more</b>
+        \nAccess your complete medical record when you need it the most. Keep your medication details on hand and share with your provider. Areas for emergency contacts, health insurance, doctors contact information are all available.
+
+        \n\n<b>Medical Information Portal</b>
+        \nCareons offers you a single point source for all health related information you would ever need. Only standard and updated health information from US National Library of Medicine, simplified from complex medical terminology into easy to understand language especially for targeted patient education.
+
+        \n\n<b>Digital File Cabinet</b>
+        \nCareons devotes an area to image files that can be attached to your record.
+
+        \n\n<b>Vitals From blood Pressure to Sugar</b>
+        \nCareons provides a range of common vital record templates for you to track your test results. Chart test results with sophistication; with the graphing feature you can view multiple plots simultaneously, zoom to specific ranges and identify points of interest.
+
+        \n\n<b>Its Secure</b>
+        \nData is stored right on your device, and on secured remote servers. Only you can authorize and share your medical information when you want. So you dont need to worry about who can see your data at the other end of the line.
+
+        \n\n<b>In case of emergency</b>
+        \nYour medical information is a valuable aid for emergency doctors or first responders.
+
+        \n\n<b>Get the word out</b>
+        \nSharing your information has never been easier. Generate a report of all or part of your record and share it straightaway. Or you can always send your info to the printer to make a hard copy.
+
+        \n\n<b>Get better care</b>
+        \nYour doctors need all your information to give the best treatment. Send your health information to make sure your doctor understands your current medical information and is equipped with relevant summaries of your past visits as well
+    </string>
+    <string name="legal">Welcome to www.careons.com, www.careons.co or www.careons.net (the "Websites" and each, individually, a "Website"). Carions Healthcare Pvt. Ltd. ("CareOns" or “the Company" or "we" or "us"), having its registered office at 114 Basement, Mall Road, Kingsway Camp, Delhi – 110009, Delhi, India owns the content of these websites. CareOns, amongst other services, facilitates “patients” or “public” or “people” in storing their health records and getting patient education regarding medical terms (“problems” or “allergies” or “medicines” or “any health issue”) and this service is provided only in good faith.
+        \nBelow are terms and conditions ("Terms and Conditions") related to services provided by CareOns, anybody using CareOns website through mobile application or in any other manner will be deemed to have accepted all these terms.
+        \nCareOns may modify these terms and conditions from time to time without any notice. And people can check these terms and conditions regularly to keep an update.
+        \nCareOns doesn\’t review health records of any individual and should not be considered in any form to be a substitute for a doctor or a hospital. We encourage you to independently verify any information you see on the website before following it.
+ 
+        \n<b>Registration</b>
+        \nFor creating, storing a health record on the Website, you will have to sign up on the Website ("Registered Users" or “Users”). To register, a user will have to provide some basic personal information such as his/her name, email address and phone number and create a user name and password. Also, CareOns may from time to time introduce paid services to registered users.
+        A Registered User can create, store health record for his/her family members and friends also he/ she will be responsible for any activity that is undertaken through his/her account on behalf of his/her family members and friends. 
+
+        \n\n<b>Medical Advice</b>
+        \nCareOns is not involved in providing any healthcare or medical advice or diagnosis and hence is not responsible.
+
+        \n\n<b>Information Uploaded</b>
+        \nYou understand that you may upload your health/ medical information on the Website in order to enable your doctor access your previous medical history. While CareOns takes utmost care with respect to the security of the information you decide to upload, you understand that any information that you disclose on the Website is at your own risk. By uploading/ sharing/ disclosing your medical information on the Website, you hereby give your consent to store such health/ medical information on CareOns servers. CareOns will retain such medical/ health information you upload on the Website for as long as it is needed to fulfill the service you seek to avail on the Website. If you delete your account, CareOns will delete such medical / health information. But please note: (1) there might be some latency in deleting this information from our servers and back-up storage; and (2) we may retain this information if necessary to comply with our legal obligations, resolve disputes, or enforce our agreements. 
+
+        \n\n<b>Sharing of Information Uploaded by You on the Website</b>
+        \nOnly you will have the right to share information, medical or otherwise, with either doctors or third party service providers. While CareOns takes utmost care with respect to the security of the information you decide to share, you understand that any information that you disclose on the Website is at your own risk.
+        While CareOns endeavors to protect any information uploaded or shared by you on the Website, you understand that CareOns shall not be held liable or responsible for the loss or damage to such information on the Website. It is your responsibility to ensure that you have all your information, medical or otherwise, stored on your hard drive.
+
+        \n\n<b>SMS and Emails received from the Website:</b>
+        \nOnce registered as a user on the Website, you will receive SMS and emails on your registered mobile number and email id. These messages could relate to your registration, transactions that you carry out through the Website and promotions that are undertaken by CareOns. It is your responsibility to ensure that you provide the correct mobile number for the transaction you wish to enter.
+
+        \n\n<ul><b>Clinical Support Information</b></ul>
+        \nCareOns may provide information to assist you in decision-making. This may include information and reminders concerning allergies, dosages, as well as general health-care related information and resources. The information and materials available through the Website are for informational and educational purposes only and are not intended to constitute professional advice, diagnosis or treatment, or to substitute for your professional judgment. Information that may be placed on the Website by third parties are beyond our control. We are not responsible for the accuracy or completeness of information available from or through our Website. You assume full risk and responsibility for the use of information you obtain from or through this site, and you agree that CareOns is not responsible or liable for any claim, loss, or liability arising from the use of the information. We do not recommend or endorse any provider of health care or health-related products, items or services, and the appearance of materials on the Website relating to any such products, items or services is not an endorsement or recommendation of them. You agree to review the definitions, functionality, and limitations of the Services, and to make an independent determination of their suitability for your use. 
+
+        \n\n<ul><b>No Medical Advice Provided</b></ul>
+        \nPlease note that we do not recommend or endorse any doctors, dentists, health care providers, procedures, opinions, or other Information that may appear on the Website. If you rely on any of the Information provided by the Site, you do so solely at your own risk.
+        The Information provided on the Website and in any other communications from or provided through CareOns is not intended as a substitute for, nor does it replace professional medical advice, diagnosis, or treatment. Do not disregard, avoid or delay obtaining medical advice from a qualified health care professional because of advice that you may have obtained through the Website. Your use of Information provided on the Website is solely at your own risk. Nothing stated or posted on the Website or available through any Services is intended to be, and must not be taken to be, the practice of medicine or the provision of medical care. 
+
+        \n\n<ul><b>Termination</b></ul>
+        \nThe Company reserves the right, in the event you breach these Terms of Use stipulated herein, to suspend and/ or terminate your access to the Website with or without notice to you. Any suspected illegal, fraudulent or abusive activity may be grounds for terminating your access to the Website. Upon suspension or termination, your right to procure the Services on the Website shall immediately cease and the Company reserves the right to remove or delete your information that is available with the Company, including but not limited to login and account information. 
+
+        \n\n<ul><b>Limitation of Liability</b></ul>
+        \nYou expressly understand that under no circumstances, including, but not limited to, negligence, shall the Company be liable to you or any other person or entity for any direct, indirect, incidental, special, remote or consequential damages, including, but not limited to damages for loss of profits, goodwill, use, data or other intangible losses, resulting from circumstances, including but not limited to: 
+        \n<ul>the use or the inability to use the Website and/ or Services; or</ul>
+        \n<ul>the use or the inability to use the Website and/ or Services; or</ul>
+        \n<ul>the use or the inability to use the Website and/ or Services; or</ul>
+
+        \n\n<ul><b>By Using This Website You Represent And Warrant That: </b></ul>
+        \n<ul>Your use of the Website shall not violate any applicable law or regulation;</ul>
+	    \n<ul>All registration information you submit is truthful and accurate and that you agree to maintain the accuracy of such information;</ul>
+        \n<ul>Your registration on the Website is solely for your personal and non-commercial use. Any use of this Website or its content other than for personal purposes is prohibited;</ul>
+        \n<ul>Your personal and non-commercial use of this Website shall be subjected to the following restrictions:</ul>
+        \n<ul>you may not modify any content of the Website;</ul>
+        \n<ul>you may not decompile, reverse engineer, or disassemble the content, or</ul>
+        \n<ul>you may not remove any copyright, trademark registration, or other proprietary notices from the Website. You further agree not to access or use this Website in any manner that may be harmful to the operation of this Website or its content</ul>
+        \n\n<ul><b>You will not: </b></ul>
+        \n<ul>use the Service available on the Website for commercial purposes of any kind; or</ul>
+        \n<ul>use the Website and/ or services in any way that is unlawful, or harms the Company or any other person or entity, as determined in the Company’s sole discretion.</ul>
+        \n<ul>You will not post, submit, upload, distribute, or otherwise transmit or make available any software or other computer files that contain a virus or other harmful component, or otherwise impair or damage the Website and / or Services or any connected network, or otherwise interfere with any person or entity\'s use or enjoyment of the Website and / or the Services.</ul>
+        \n<ul>You will not engage in any form of antisocial, disrupting, or destructive acts, including "flaming", "spamming","flooding","trolling","phishing" and "griefing" as those terms are commonly understood and used on the Internet.</ul>
+        \n<ul>You will not delete or modify any content of the Website and / or Services, including but not limited to, legal notices, disclaimers or proprietary notices such as copyright or trademark symbols, logos, that you do not own or have express permission to modify.</ul>
+        \n<ul>The Company cannot and will not assure you that other CareOns Users are or will be complying with the foregoing rules or any other provisions of these Terms of Use, and, as between you and the Company, you hereby assume all risk of harm or injury resulting from any such lack of compliance.</ul>
+        \n<ul>All information, content and material contained in the Website and / or Services are the Company\'s intellectual property. All trademarks, services marks, trade names, and trade dress are proprietary to the Company. No information, content or material from the Website and / or Services may be copied, reproduced, republished, uploaded, posted, transmitted or distributed in any way without the Company\'s express written permission.</ul>
+        \n<ul>You acknowledge that when you access a link that leaves the Website, the site you will enter into is not controlled by the Company and different terms of use and privacy policies may apply. By accessing links to other sites, you acknowledge that the Company is not responsible for those sites. The Company reserves the right to disable links from third-party sites to the Website, although the Company is under no obligation to do so.</ul>
+        \n\n<ul><b>You expressly understand and agree that:</b></ul>
+        \n<ul>The information, content and materials on this Website and / or Services are provided on an "as is" and "as available" basis. The Company and all its subsidiaries, affiliates, officers, employees, agents, partners and licensors disclaim all warranties of any kind, either express or implied, including but not limited to, implied warranties on merchantability, fitness for a particular purpose and non-infringement.</ul>
+        \n<ul>The Company does not warrant that the functions contained in content, information and materials on the Website and / or Services, including, without limitation any third party sites or services linked to the Website and / or services will be uninterrupted, timely or error-free, that the defects will be rectified, or that the Website or the servers that make such content, information and materials available are free of viruses or other harmful components.</ul>
+        \n<ul>Any material downloaded or otherwise obtained through the Website and / or Services are accessed at your own risk, and you will be solely responsible for any damage or loss of data that results from such download to your computer system.</ul>
+
+        \n\n<ul><b>Applicable Law</b></ul>
+        \nThe interpretation of this Agreement and the resolution of any disputes arising under these Terms of Use shall be governed by the laws of India. If any action or other proceeding is brought on or in connection with this Agreement, the venue of such action shall be exclusively at New Delhi, India. 
+
+        \n\n<ul><b>Arbitration</b></ul>
+        \nAny dispute, claim or controversy arising out of or relating to this notice or the breach, termination, enforcement, interpretation or validity thereof, including the determination of the scope or applicability of these Terms of Use to arbitrate, or to your use of the Website or the Services or information to which it gives access, shall be determined by arbitration in India, before a single arbitrator. Arbitration shall be conducted in accordance with the Arbitration and Conciliation Act, 1996. The venue of such arbitration shall be New Delhi, India. All proceedings of such arbitration, including, without limitation, any awards, shall be in the English language. The award shall be final and binding on the Parties. The Parties shall have the right to apply to a court of competent jurisdiction to obtain interim injunctive relief in respect of any dispute, pending resolution of such dispute in accordance with Clause 11(a).
+
+        \n\n<ul><b>Severability</b></ul>
+        \nIf any provision of these Terms of Use is held by a court of competent jurisdiction or arbitral tribunal to be unenforceable under applicable law, then such provision shall be excluded from these Terms of Use and the remainder of these Terms of Use shall be interpreted as if such provision were so excluded and shall be enforceable in accordance with its terms; provided however that, in such event these Terms of Use shall be interpreted so as to give effect, to the greatest extent consistent with and permitted by applicable law, to the meaning and intention of the excluded provision as determined by such court of competent jurisdiction or arbitral tribunal. 
+
+        \n\n<ul><b>Notices</b></ul>
+        \nAll notices and other communications required or permitted hereunder to be given to a Party shall be in writing, in the English language, and shall be sent by e-mail, or otherwise delivered by hand at such other address as the Party shall have furnished to the other Party in writing in accordance with this provision:
+
+        If to CareOns:
+        info@careons.com
+
+        If to you, at the email address provided by you to us when you registered as a User.
+
+        \n\n<ul><b>Waiver</b></ul>
+        \nNo term of these Terms of Use shall be deemed waived and no breach excused, unless such waiver or consent shall be in writing and signed by the Party claimed to have waived or consented. Any consent by any Party to, or waiver of a breach by the other, whether expressed or implied, shall not constitute consent to, waiver of, or excuse for any other different or subsequent breach. 
+
+        \n\n<ul><b>Complete Understanding</b></ul>
+        \nThese Terms of Use contain the entire understanding of the Parties, and there are no other written or oral understandings or promises between the Parties with respect to the subject matter of these Terms of Use other than those contained or referenced in these Terms of Use. 
+
+        \n\n<ul><b>Advice of Counsel</b></ul>
+        \nEach Party acknowledges:
+        (i) having fully read these Terms of Use in its entirety;
+        (ii) having had full opportunity to study and review these Terms of Use;
+        (iii) having been advised that counsel for us has acted solely on our behalf in connection with the negotiation, preparation, and execution of these Terms of Use; (d) having been advised that all parties have the right to consult and should consult independent counsel respecting their rights and duties under these Terms of Use; and (e) having had access to all such information as has been requested. 
+
+        You have read these Terms of Use and agree to all of the provisions contained above.
+    </string>
+
+
+    <!-- S I G N U P   S C R E E N  -->
+    <string name="signup_name">Name</string>
+    <string name="signup_email">Email</string>
+    <string name="signup_pwd">Password</string>
+    <string name="signup_confirm_pwd">Confirm Password</string>
+    <string name="signup_phone">Phone No</string>
+    <string name="profile_age">Age</string>
+    <string name="signup_dob">Date of Birth</string>
+    <string name="bloodgroup">Blood Group</string>
+
+
+    <!-- C R E A T E   A C C O U N T -->
+    <string name="height_ft_hint">( in feet )</string>
+    <string name="height_inc_hint">( in inches )</string>
+    <string name="weight_hint">( in kgs )</string>
+
+
+    <!-- C H A N G E   P A S S W O R D -->
+    <string name="change_password">Change Password</string>
+    <string name="current_password">Current Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+
+    <!-- H O M E -->
+    <string name="health_book">Health Book</string>
+    <string name="active_issues">Active Issues</string>
+    <string name="patient_education">Patient Education</string>
+    <string name="health_search">Education</string>
+    <string name="vitals_section">Vitals</string>
+    <string name="upload_doc">Upload Doc</string>
+    <string name="card_message">Organize, access all your health information anytime and from anywhere.</string>
+    <string name="health_education_desc"><b>Health is Wealth</b> \nAsk us about your health concerns.</string>
+    <string name="age">Detection Age:</string>
+    <string name="weight">Weight</string>
+    <string name="height">Height</string>
+    <string name="gender">Gender</string>
+    <string name="blood_group">Blood Group</string>
+    <string name="medical_problems">Medical Problems</string>
+    <string name="allergies">Allergies</string>
+    <string name="family_history">Family History</string>
+    <string name="medication">Medication</string>
+    <string name="lifestyle">Lifestyle</string>
+    <string name="surgical_history">Surgical History</string>
+    <string name="gynae">Gynaecological History</string>
+    <string name="pregnancy">Pregnancy</string>
+    <string name="paediatric_history">Paediatric History</string>
+    <string name="active_medical_problem">Active Medical Problems</string>
+    <string name="active_allergies">Active Allergies</string>
+    <string name="active_medication">Active Medication</string>
+    <string name="active_gynae">Active Gynaecological History</string>
+    <string name="active_paediatric_history">Active Paediatric History</string>
+    <string name="hs_problems_empty">Proceed to Healthbook to add list of problems, allergies and medication to help us serve you better</string>
+    <string name="read_more">Tap on the existing listed problem cards to know more or search for more problems</string>
+    <string name="empty_hs_cta">Proceed to Healthbook</string>
+    <string name="title_activity_search">Health Search</string>
+    <string name="search">Search</string>
+    <string name="search_hint">Start typing here ...</string>
+    <string name="medication_search_hint">Eg: Paracetamol, Disprin ...</string>
+
+    <string name="medical_search_hint">Eg: Arthritis, Diabetes ...</string>
+    <string name="family_search_hint">Eg: Hyper Tension, Cataract ...</string>
+    <string name="surgical_search_hint">Eg: Knee Surgery, Hearnia Surgery ...</string>
+    <string name="childhood_search_hint">Eg: Chicken Pox, Jaundice ...</string>
+    <string name="gynae_search_hint">Eg: Infertility, Ovarian Cysts ...</string>
+
+    <string name="empty_vitals_text">Proceed to Vitals Section to provide us blood pressure, blood glucose and body mass index to help us serve you better</string>
+    <string name="empty_vitals">Proceed to Vitals Section</string>
+    <string name="empty_vitals_bp_text">Proceed to Vitals Section to add your blood pressure to help us serve you better</string>
+    <string name="empty_vitals_bg_text">Proceed to Vitals Section to add your blood glucose to help us serve you better</string>
+    <string name="empty_vitals_bmi_text">Proceed to Vitals Section to add your body mass index to help us serve you better</string>
+    <string name="see_more">See Details</string>
+    <string name="title_activity_web_view">Health Search</string>
+    <string name="problems">Problems</string>
+    <string name="medicines">Medicines</string>
+    <string name="investigative">Investigative</string>
+    <string name="surgical">Surgical</string>
+    <string name="allergy">Allergies</string>
+    <string name="ellipsize">...</string>
+
+    <!-- Q U I C K   U P L O A D -->
+    <string name="quick_upload">Quick Upload</string>
+    <string name="save_image">Upload Image</string>
+    <string name="title">Title</string>
+    <string name="date">Date</string>
+    <string name="date_hint">(DD MMM YYYY)</string>
+    <string name="dated">Dated : </string>
+    <string name="tag">Tag</string>
+    <string name="comments">Please enter your comments here in 180 characters (optional)</string>
+    <string name="upload_more">Add More</string>
+    <string name="add_another">Add image</string>
+    <string name="upload_documents">Upload Documents</string>
+    <string name="camera">Camera</string>
+    <string name="choose_gallery">Gallery</string>
+    <string name="choose_upload_doc">Uploaded Documents</string>
+    <string name="upload_success">Saved Successfully</string>
+    <string name="send_photo">Send Photo</string>
+    <string name="chat_title_hint">Please enter title for document ...</string>
+    <string name="chat_save_hint">Please note that by default this image will be save inside your Others folder.</string>
+    <string name="chat_notification_hint">Tap Here to Read New Message</string>
+
+    <!-- V I T A L S -->
+    <string name="blood_pressure">Blood Pressure</string>
+    <string name="blood_glucose">Blood Glucose</string>
+    <string name="bmi">Body Mass Index</string>
+    <string name="vitals_bp_add">Add Blood Pressure</string>
+    <string name="vitals_bp_update">Update Blood Pressure</string>
+    <string name="vitals_bg_update">Update Blood Glucose</string>
+    <string name="vitals_bmi_update">Update Body Mass Index</string>
+    <string name="vitals_empty">Add vitals to track your activity via graphs</string>
+    <string name="select_date">Select Date</string>
+    <string name="select_time">Select Time</string>
+    <string name="vitals_bp_empty">Add your Blood Pressure readings to track your control and progress with graphs</string>
+    <string name="vitals_bp_card_Sys">Systolic Blood Pressure (in mm Hg)</string>
+    <string name="vitals_bp_card_Dys">Diastolic Blood Pressure (in mm Hg)</string>
+    <string name="graph_legend_Sys">Systolic</string>
+    <string name="graph_legend_Dys">Diastolic</string>
+    <string name="vitals_bp_card_desc">Systolic / Diastolic Blood Pressure (in mm Hg)</string>
+    <string name="vitals_bg_add">Add Blood Glucose</string>
+    <string name="vitals_bg_empty">Add your Blood Glucose to track your control and progress with graphs</string>
+    <string name="vitals_bg_text">Blood Glucose (in mg/dL)</string>
+    <string name="graph_legend_BMI">BMI</string>
+    <string name="vitals_bmi_add">Add BMI</string>
+    <string name="vitals_bmi_empty">Add Height and Weight to track your activity via graphs</string>
+    <string name="vitals_bmi_card_ht">Height</string>
+    <string name="vitals_bmi_card_ht_display">Height (in feet and inches)</string>
+    <string name="vitals_bmi_card_ht_ft_display">Height (in feet)</string>
+    <string name="vitals_bmi_card_ht_inc_display">Height (in inches)</string>
+    <string name="feet">In feet</string>
+    <string name="inches">In inches</string>
+    <string name="vitals_bmi_card_wt">Weight (in kgs)</string>
+    <string name="save">Save Changes</string>
+    <string name="save_vitals_bp">Add Blood Pressure to Vitals</string>
+    <string name="save_vitals_bg">Add Blood Glucose to Vitals</string>
+    <string name="save_vitals_bmi">Calculate Body Mass Index</string>
+    <string name="required">Required</string>
+    <string name="no_data_graph">Please enter data to track your activity via graphs</string>
+    <string name="map_last">Map Last</string>
+    <string name="last10">10 Points</string>
+    <string name="last25">25 Points</string>
+    <string name="last50">50 Points</string>
+    <string name="checkup">Checkup</string>
+    <string name="post_meal">Post Meal</string>
+    <string name="pre_meal">Fasting</string>
+    <string name="random">Random</string>
+    <string name="post_meal_desc">Blood sugar levels checks approx. 2 hours after meal is post meal reading</string>
+    <string name="pre_meal_desc">blood sugar levels checked atleast 8 hours after meal is fasting blood sugar</string>
+    <string name="random_desc">Blood sugar levels checked between 3 hours to 8 hours after meal is random blood sugar</string>
+    <string name="week">Week</string>
+    <string name="month">Month</string>
+    <string name="quarter">Quarter</string>
+    <string name="year">Year</string>
+    <string name="years">Years</string>
+    <string name="am">am</string>
+    <string name="pm">pm</string>
+    <string name="normal">Normal</string>
+    <string name="high">High</string>
+    <string name="alarming">Alarming</string>
+    <string name="alarming_help_bp">We are detecting abnormal Blood Pressure. Please contact a doctor immediately for help.</string>
+    <string name="alarming_help_bg">We are detecting abnormal Blood Glucose. Please contact a doctor immediately for help.</string>
+    <string name="underweight">Underweight</string>
+    <string name="overweight">Overweight</string>
+    <string name="obese">Obese</string>
+    <string name="load_more">Load More</string>
+    <string name="load_more_bp">NOTE: Tap here to see more historical blood pressure entries</string>
+    <string name="load_more_bg">NOTE: Tap here to see more historical blood glucose entries</string>
+    <string name="load_more_bmi">NOTE: Tap here to see more historical body mass index entries</string>
+
+
+    <!-- H E A L T H B O O K - M E D I C A L   P R O B L E M -->
+    <string name="add_medical_problem">Add Medical Problem</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="mp_1">When did you find out?</string>
+    <string name="mp_2">Still suffering?</string>
+    <string name="mp_3">Since when?</string>
+    <string name="mp_4">Still Suffering</string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+
+    <!-- H E A L T H B O O K - F A M I L Y   H I S T O R Y -->
+    <string name="add_family_problems">Add Family Problem</string>
+    <string name="father">Father</string>
+    <string name="mother">Mother</string>
+    <string name="brother">Brother</string>
+    <string name="sister">Sister</string>
+    <string name="grandfather">Grandfather</string>
+    <string name="grandmother">Grandmother</string>
+    <string name="fage">Detection Age :</string>
+
+    <!-- H E A L T H B O O K - L I F E S T Y L E -->
+    <string name="add_lifestyle_history">Add Lifestyle History</string>
+    <string name="lf_1">Since when?</string>
+    <string name="lf_2">Still continuing?</string>
+    <string name="lf_3">End Date</string>
+    <string name="lf_4">Since when?</string>
+
+    <!-- H E A L T H B O O K - G Y N A E C O L O G Y -->
+    <string name="add_gynae_history">Add Gynaecological Problems</string>
+    <string name="gy_1">Since When?</string>
+    <string name="gy_2">Still active?</string>
+
+    <!-- H E A L T H B O O K - A L L E R G Y -->
+    <string name="al_1">Kind of reaction</string>
+    <string name="al_2">When did you find out?</string>
+    <string name="al_3">Since when?</string>
+
+    <!-- H E A L T H B O O K - S U R G I C A L  H I S T O R Y -->
+    <string name="add_surgical_history">Add Surgical History</string>
+    <string name="sh_1">When?</string>
+    <string name="sh_2">Problem resolved?</string>
+    <string name="sh_3">Please add your comments here.</string>
+    <string name="add_duration">Add Duration"</string>
+
+    <!-- H E A L T H B O O K - C H I L D H O O D  H I S T O R Y -->
+    <string name="add_childhood_history">Add Childhood History</string>
+    <string name="ch_1">When?</string>
+    <string name="ch_2">Problem resolved?</string>
+
+    <!-- H E A L T H B O O K - M E D I C A T I O N -->
+    <string name="add_medication">Add Medication</string>
+    <string name="med_1">Since When?</string>
+    <string name="med_2">Units</string>
+    <string name="med_3">Dosage</string>
+    <string name="med_3_hint">eg: 250mg / 500 mg etc</string>
+    <string name="med_4">Frequency</string>
+    <string name="med_5">Continuing Medicine</string>
+    <string name="med_6">Since when?</string>
+    <string name="med_7">End Date</string>
+    <string name="med_8">Name of Medicine</string>
+    <string name="med_comments_hint">Effects / Relief / Problems etc.</string>
+
+
+    <!-- M E D I C A L   P R O B L E M   L I S T -->
+    <string name="medical_problem_1">Diabetes</string>
+    <string name="medical_problem_2">Thyroid</string>
+    <string name="medical_problem_3">Cataract</string>
+    <string name="medical_problem_4">Tuberculosis</string>
+    <string name="medical_problem_5">Asthma</string>
+    <string name="medical_problem_6">Liver Problem</string>
+    <string name="medical_problem_7">Arthritis</string>
+    <string name="medical_problem_8">Hyper Tension</string>
+    <string name="medical_problem_9">Heart Problem</string>
+    <string name="medical_problem_10">Cancer</string>
+
+    <!-- M E D I C A L   P R O B L E M   URL -->
+    <string name="medical_problem_url_1">https://caringmillionsstorage.blob.core.windows.net/problems/Diabetes.html</string>
+    <string name="medical_problem_url_2">https://caringmillionsstorage.blob.core.windows.net/problems/Thyroid Diseases.html</string>
+    <string name="medical_problem_url_3">https://caringmillionsstorage.blob.core.windows.net/problems/Cataract.html</string>
+    <string name="medical_problem_url_4">https://caringmillionsstorage.blob.core.windows.net/problems/Tuberculosis.html</string>
+    <string name="medical_problem_url_5">https://caringmillionsstorage.blob.core.windows.net/problems/Asthma.html</string>
+    <string name="medical_problem_url_6">https://caringmillionsstorage.blob.core.windows.net/problems/Liver Diseases.html</string>
+    <string name="medical_problem_url_7">https://caringmillionsstorage.blob.core.windows.net/problems/Arthritis.html</string>
+    <string name="medical_problem_url_8">https://caringmillionsstorage.blob.core.windows.net/problems/HypertensionseeHigh Blood Pressure.html</string>
+    <string name="medical_problem_url_9">https://caringmillionsstorage.blob.core.windows.net/problems/Heart Diseases.html</string>
+    <string name="medical_problem_url_10">https://caringmillionsstorage.blob.core.windows.net/problems/Cancer.html</string>
+
+
+    <!-- L I F E S T Y L E   L I S T -->
+    <string name="lifestyle_1">Tobacco Chewing</string>
+    <string name="lifestyle_2">Smoking</string>
+    <string name="lifestyle_3">Alcohol Intake</string>
+    <string name="lifestyle_4">Drug Abuse</string>
+    <string name="lifestyle_5">Sedentary Lifestyle</string>
+    <string name="lifestyle_6">Unsafe Sex</string>
+    <string name="lifestyle_7">Regular Junk Food Intake</string>
+    <string name="lifestyle_8">Regular Physical Workout</string>
+    <string name="lifestyle_9">Inadequate Sleep / Rest</string>
+    <string name="lifestyle_10">Physical Stress</string>
+
+    <!-- L I F E S T Y L E  D  U R A T I O N L I S T -->
+    <string name="duration_1">One Day</string>
+    <string name="duration_2">Two day</string>
+    <string name="duration_3">Five Day</string>
+    <string name="duration_4">Ten Day</string>
+    <string name="duration_5">One month</string>
+
+
+    <!-- G Y N A E C O L O G Y   L I S T -->
+    <string name="gynae_1">Irregular Menses</string>
+    <string name="gynae_2">Heavy Flow</string>
+    <string name="gynae_3">Missed Periods</string>
+    <string name="gynae_4">Ovarian Cysts</string>
+    <string name="gynae_5">Follicular Cyst</string>
+    <string name="gynae_6">Abnormal Pap Smear</string>
+    <string name="gynae_7">Contraceptive Pills</string>
+    <string name="gynae_8">IUCD</string>
+    <string name="gynae_9">Hormone Replacement Therapy</string>
+    <string name="gynae_10">Infertility</string>
+
+    <!-- G Y N A E C O L O G Y   URL -->
+    <string name="gynae_url_1">https://www.nlm.nih.gov/medlineplus/ency/article/007496.htm</string>
+    <string name="gynae_url_2">https://www.nlm.nih.gov/medlineplus/ency/article/007496.htm</string>
+    <string name="gynae_url_3">https://www.nlm.nih.gov/medlineplus/ency/article/001219.htm</string>
+    <string name="gynae_url_4">https://caringmillionsstorage.blob.core.windows.net/problems/Ovarian Cysts.html</string>
+    <string name="gynae_url_5">https://www.nlm.nih.gov/medlineplus/ency/article/001504.htm</string>
+    <string name="gynae_url_6">https://caringmillionsstorage.blob.core.windows.net/problems/PAP SmearseeCervical Cancer Screening.html</string>
+    <string name="gynae_url_7">http://youngwomenshealth.org/2014/02/25/pcos-and-the-pill/</string>
+    <string name="gynae_url_8">https://www.nlm.nih.gov/medlineplus/ency/article/007635.htm</string>
+    <string name="gynae_url_9">Hhttps://caringmillionsstorage.blob.core.windows.net/problems/Hormone Replacement Therapy.html</string>
+    <string name="gynae_url_10">https://caringmillionsstorage.blob.core.windows.net/problems/Infertility.html</string>
+
+
+    <!-- S U R G I C A L   P R O B L E M   L I S T -->
+    <string name="surgical_1">Knee Surgery</string>
+    <string name="surgical_2">Spine Surgery</string>
+    <string name="surgical_3">Heart Surgery</string>
+    <string name="surgical_4">Cancer Surgery</string>
+    <string name="surgical_5">Hemodialysis</string>
+    <string name="surgical_6">Eye Surgery</string>
+    <string name="surgical_7">Appendix Removal</string>
+    <string name="surgical_8">Hernia Surgery</string>
+    <string name="surgical_9">Gallbladder Removal</string>
+    <string name="surgical_10">Sterilization Surgery</string>
+    <string name="surgical_11">Bariatric Surgery</string>
+    <string name="surgical_12">Plastic Cosmetic Surgery</string>
+
+    <!-- S U R G I C A L   P R O B L E M   URL -->
+    <string name="surgical_url_3">https://www.nlm.nih.gov/medlineplus/ebola.html</string>
+
+
+    <!-- C H I L D H O O D   H I S T O R Y   L I S T -->
+    <string name="childhood_1">Jaundice</string>
+    <string name="childhood_2">Developmental Disabilities</string>
+    <string name="childhood_3">Birth Injuries</string>
+    <string name="childhood_4">Birth Defects</string>
+    <string name="childhood_5">Maternal illness</string>
+    <string name="childhood_6">Chickenpox</string>
+    <string name="childhood_7">Measles</string>
+    <string name="childhood_8">Mumps</string>
+    <string name="childhood_9">Premature Birth</string>
+
+    <!-- C H I L D H O O D   H I S T O R Y   URL -->
+    <string name="childhood_url_1">https://caringmillionsstorage.blob.core.windows.net/problems/Jaundice.html</string>
+    <string name="childhood_url_2">https://caringmillionsstorage.blob.core.windows.net/problems/Developmental Disabilities.html</string>
+    <string name="childhood_url_3">https://caringmillionsstorage.blob.core.windows.net/problems/Birth InjuriesseeChildbirth Problems.html</string>
+    <string name="childhood_url_4">https://caringmillionsstorage.blob.core.windows.net/problems/Birth Defects.html</string>
+    <string name="childhood_url_5">http://www.marchofdimes.org/complications/preeclampsia.aspx</string>
+    <string name="childhood_url_6">https://caringmillionsstorage.blob.core.windows.net/problems/Chickenpox.html</string>
+    <string name="childhood_url_7">https://caringmillionsstorage.blob.core.windows.net/problems/Measles.html</string>
+    <string name="childhood_url_8">https://caringmillionsstorage.blob.core.windows.net/problems/Mumps.html</string>
+    <string name="childhood_url_9">https://caringmillionsstorage.blob.core.windows.net/problems/Premature BirthseePreterm Labor.html</string>
+
+
+    <!-- O N B O A R D I N G -->
+    <string name="onb_list_descriptive_text">Tap on any of the cards to help us track your Electronic Health Records.</string>
+    <string name="medical_problem_title">Medical Problem</string>
+    <string name="allergies_title">Allergies</string>
+    <string name="family_history_title">Family History</string>
+    <string name="medication_title">Medication</string>
+    <string name="lifestyle_title">Lifestyle</string>
+    <string name="surgical_history_title">Surgical History</string>
+    <string name="pregnancy_title">Pregnancy</string>
+    <string name="childhood_history_title">Childhood History</string>
+    <string name="gynae_title">Gynaecology History</string>
+    <string name="continue_to_healthbook">Continue to Healthbook</string>
+
+
+    <!-- A L L E R G Y -->
+    <string name="add_allergy_history">Add Allergy History</string>
+    <string name="allergy_type">Type :</string>
+    <string name="allergy_name">Name :</string>
+    <string name="allergy_kind_of_reaction">Kind of reaction</string>
+    <string name="allergy_since_when">Since When ?</string>
+    <string name="allergy_comments">Comments ...</string>
+    <string name="allergy_food">Food</string>
+    <string name="allergy_environment">Environment</string>
+    <string name="allergy_medication">Medication</string>
+
+
+    <!-- G A L L E R Y -->
+    <string name="document_gallery">Gallery</string>
+    <string name="category">Category</string>
+    <string name="sort">Sort Gallery</string>
+
+
+    <!-- C O M M O N S -->
+    <string name="skip_onboarding">Skip Onboarding</string>
+    <string name="proceed">Proceed</string>
+    <string name="quit_message">Are you sure you want to exit Careons?</string>
+    <string name="logout_confirmation">Are you sure you want to logout?</string>
+    <string name="delete_confirmation">Are you sure you want to delete?</string>
+    <string name="accept" translatable="false">Accept</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="quit">Quit</string>
+    <string name="logout">Logout</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+
+    <!-- L O A D E R S -->
+    <string name="load_ing">Loading</string>
+    <string name="updating">Updating</string>
+    <string name="uploading">Uploading</string>
+
+    <string name="dialog_logout_title">Confirm Logout</string>
+    <string name="dialog_logout">We hope you come back \n soon ...</string>
+    <string name="dialog_delete_title">Confirm Delete</string>
+    <string name="dialog_delete">Are you sure you want to delete this record?</string>
+    <string name="dialog_internet_failure_title">Internet Connection Failure</string>
+    <string name="dialog_internet_failure">Where did the network disappear?</string>
+    <string name="dialog_auth_failure_title">Session Expired</string>
+    <string name="dialog_auth_failure">Please signin again to continue ...</string>
+    <string name="dialog_exception_title">Ooopssiieess!!!</string>
+    <string name="dialog_exception">Something went wrong. You can try to reload the page or come back later.</string>
+    <string name="dialog_email_id_exist_exception">This mail id is already registered. Please use another mail id or forget password option.</string>
+    <string name="dialog_email_password_exception">Email / Password do not match.</string>
+    <string name="dialog_email_not_registered_exception">This mail id is not registered.</string>
+    <string name="dialog_forgot_text">Forgot Password</string>
+    <string name="dialog_password_change_title">Success</string>
+    <string name="dialog_password_change">Your password has been changed successfully</string>
+
+    <string name="err_msg_signup">Please fill the fields correctly before proceeding</string>
+    <string name="err_msg_name">Please enter valid name</string>
+    <string name="err_msg_email">Please enter valid email</string>
+    <string name="err_msg_password">Please enter minimum 6 char</string>
+    <string name="err_msg_confirm_password">Passwords do not match</string>
+    <string name="err_msg_phone_no">Please enter 10 digit phone number</string>
+    <string name="err_msg_chat_title">Please enter title</string>
+
+
+    <string name="err_msg_dob">Select Date of Birth</string>
+    <string name="err_msg_gender">Select Sex</string>
+    <string name="err_msg_height">Enter Height</string>
+    <string name="err_msg_height_inches">Height in inches cannot be more than 11</string>
+    <string name="err_msg_weight">Select Weight</string>
+    <string name="err_msg_blood_group">Select Blood Group</string>
+    <string name="phone_empty">Please enter your number</string>
+
+    <string name="err_problem_occurred">Something Went Wrong</string>
+    <string name="err_internet_not_available">Please check your internet connection</string>
+    <string name="err_json_parse_exception">Json Parse Exception</string>
+    <string name="err_exception">Error Exception</string>
+    <string name="err_api_failure">API Failure</string>
+    <string name="err_insufficient_memory_space">Insufficient Memory Space</string>
+    <string name="err_no_search_result">No Result Found. Please Try Something Else.</string>
+    <string name="err_error_search_result">Press Enter To Search</string>
+    <string name="err_error_health_search_result">Press Enter To Search</string>
+    <string name="err_internet_failure_search_result">Internet Not Available. Please Check Your Internet Connection.</string>
+
+    <string name="err_cancel_auth">Facebook Authentication Cancelled. Please try again after sometime.</string>
+    <string name="err_facebook_auth">Facebook Authentication Error. Please try again after sometime.</string>
+
+
+    <!-- G O O G L E   I D -->
+    <string name="google_client_id">298087874325-ltid1aedrh3fkb5i20lppo6f2en7hl6r.apps.googleusercontent.com</string>
+
+    <!-- F A C E B O O K    A P P L I C A T I O N   I D -->
+    <string name="facebook_app_id">1686611234956552</string>
+    <string name="title_activity_onboarding_list">OnboardingListActivity</string>
+    <string name="male"><p><u>Male</u></p></string>
+    <string name="female"><p><u>Female</u></p></string>
+
+    <string name="title_activity_app_onboarding">AppOnboardingActivity</string>
+
+    <string name="action_home" translatable="false">Goto Home</string>
+    <string name="action_reload">Reload</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_ud">Upload Documents</string>
+    <string name="action_cancel" translatable="false">Cancel</string>
+    <string name="action_ok">OK</string>
+    <string name="action_delete" translatable="false">Delete</string>
+    <string name="action_expand">Expand</string>
+    <string name="action_add" translatable="false">Add</string>
+
+    <string name="title_activity_onboarding_medical_problems">Medical Problem</string>
+    <string name="title_activity_onboarding_family_history">Family History</string>
+    <string name="title_activity_onboarding_lifestyle">Lifestyle</string>
+    <string name="title_activity_onboarding_gynaecological_issues">Gynaecological</string>
+    <string name="title_activity_user_signup">UserSignupActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_gallery_detail">GalleryDetailActivity</string>
+    <string name="title_activity_vital_detail">VitalDetailActivity</string>
+    <string name="title_activity_activity_delete">ActivityDelete</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="err_msg_start_date">Enter date</string>
+    <string name="err_msg_date">Enter start and end date</string>
+    <string name="select_the_source">Select the source of allergy ?</string>
+    <string name="err_msg_dob_date">Enter DOB date</string>
+    <string name="err_msg_detection_date">Enter date of detection</string>
+
+
+    <!-- A L L E R G Y  F O O D  L I S T -->
+    <string name="allergy_food_1">Egg</string>
+    <string name="allergy_food_2">Fish / Shellfish</string>
+    <string name="allergy_food_3">Fruit</string>
+    <string name="allergy_food_4">Garlic</string>
+    <string name="allergy_food_5">Gluten</string>
+    <string name="allergy_food_6">Hot peppers</string>
+    <string name="allergy_food_7">Meat</string>
+    <string name="allergy_food_8">Milk</string>
+    <string name="allergy_food_9">Oats</string>
+    <string name="allergy_food_10">Peanut</string>
+    <string name="allergy_food_11">Soy</string>
+    <string name="allergy_food_12">Sulfites</string>
+    <string name="allergy_food_13">Tartrazine</string>
+    <string name="allergy_food_14">Tree nut</string>
+    <string name="allergy_food_15">Wheat</string>
+    <string name="allergy_food_16">Abalone, perlemoen</string>
+    <string name="allergy_food_17">Acerola</string>
+    <string name="allergy_food_18">Alaska Pollock</string>
+    <string name="allergy_food_19">Almond</string>
+    <string name="allergy_food_20">Aniseed</string>
+    <string name="allergy_food_21">Apple</string>
+    <string name="allergy_food_22">Apricot</string>
+    <string name="allergy_food_23">Avocado</string>
+    <string name="allergy_food_24">Banana</string>
+    <string name="allergy_food_25">Barley</string>
+    <string name="allergy_food_26">Bell pepper</string>
+    <string name="allergy_food_27">Brazil nut</string>
+    <string name="allergy_food_28">Buckwheat</string>
+    <string name="allergy_food_29">Cabbage</string>
+    <string name="allergy_food_30">Camomile</string>
+    <string name="allergy_food_31">Carp</string>
+    <string name="allergy_food_32">Carrot</string>
+    <string name="allergy_food_33">Cashew</string>
+    <string name="allergy_food_34">Castor bean</string>
+    <string name="allergy_food_35">Celery, Celeriac</string>
+    <string name="allergy_food_36">Cherry</string>
+    <string name="allergy_food_37">Chestnut</string>
+    <string name="allergy_food_38">Chickpea, garbanzo, bengal gram</string>
+    <string name="allergy_food_39">Cocoa</string>
+    <string name="allergy_food_40">Coconut</string>
+    <string name="allergy_food_41">Cod</string>
+    <string name="allergy_food_42">Cotton seed</string>
+    <string name="allergy_food_43">Courgette, zucchini</string>
+    <string name="allergy_food_44">Crab</string>
+    <string name="allergy_food_45">Date</string>
+    <string name="allergy_food_46">Egg</string>
+    <string name="allergy_food_47">Fig</string>
+    <string name="allergy_food_48">Fish</string>
+    <string name="allergy_food_49">Flax seed, linseed</string>
+    <string name="allergy_food_50">Frog, edible</string>
+    <string name="allergy_food_51">Garden plum</string>
+    <string name="allergy_food_52">Garlic</string>
+    <string name="allergy_food_53">Grape</string>
+    <string name="allergy_food_54">Kiwi fruit; chinese gooseberry</string>
+    <string name="allergy_food_55">Lentil</string>
+    <string name="allergy_food_56">Garlic</string>
+    <string name="allergy_food_57">Lettuce</string>
+    <string name="allergy_food_58">Lobster</string>
+    <string name="allergy_food_59">Lupin or Lupine</string>
+    <string name="allergy_food_60">Lychee</string>
+    <string name="allergy_food_61">Mackerel</string>
+    <string name="allergy_food_62">Maize, corn</string>
+    <string name="allergy_food_63">Mango</string>
+    <string name="allergy_food_64">Melon</string>
+    <string name="allergy_food_65">Milk, cow</string>
+    <string name="allergy_food_66">Mustard</string>
+    <string name="allergy_food_67">Oat</string>
+    <string name="allergy_food_68">Oyster</string>
+    <string name="allergy_food_69">Peach</string>
+    <string name="allergy_food_70">Peanut; ground nuts; monkey nuts</string>
+    <string name="allergy_food_71">Pear</string>
+    <string name="allergy_food_72">Pecan</string>
+    <string name="allergy_food_73">Persimmon</string>
+    <string name="allergy_food_74">Pine nuts</string>
+    <string name="allergy_food_75">Pineapple</string>
+    <string name="allergy_food_76">Pomegranate</string>
+    <string name="allergy_food_77">Poppy seed</string>
+    <string name="allergy_food_78">Potato</string>
+    <string name="allergy_food_79">Pumpkin</string>
+    <string name="allergy_food_80">Rice</string>
+    <string name="allergy_food_81">Rye</string>
+    <string name="allergy_food_82">Salmon</string>
+    <string name="allergy_food_83">Sesame</string>
+    <string name="allergy_food_84">Shrimp, black tiger shrimp</string>
+    <string name="allergy_food_85">Shrimp, brown shrimp</string>
+    <string name="allergy_food_86">Shrimp, greasyback shrimp</string>
+    <string name="allergy_food_87">Shrimp, Indian prawn</string>
+    <string name="allergy_food_88">Shrimp, Neptune rose shrimp</string>
+    <string name="allergy_food_89">Shrimp, white shrimp</string>
+    <string name="allergy_food_90">Snail</string>
+    <string name="allergy_food_91">Soybean, Soya</string>
+    <string name="allergy_food_92">Squid</string>
+    <string name="allergy_food_93">Strawberry</string>
+    <string name="allergy_food_94">Sunflower seed</string>
+    <string name="allergy_food_95">Tomato</string>
+    <string name="allergy_food_96">Tuna</string>
+    <string name="allergy_food_97">Turnip</string>
+    <string name="allergy_food_98">Walnut</string>
+    <string name="allergy_food_99">Wheat</string>
+    <string name="allergy_food_127">Others ( Food )</string>
+
+    <!-- A L L E R G Y  F O O D  URL -->
+    <string name="allergy_food_url">https://www.nlm.nih.gov/medlineplus/foodallergy.html</string>
+
+    <!-- A L L E R G Y   E N V I R O N M E N T   L I S T -->
+    <string name="allergy_environment_109">Pollen</string>
+    <string name="allergy_environment_110">Cat</string>
+    <string name="allergy_environment_111">Dog</string>
+    <string name="allergy_environment_112">Insect sting</string>
+    <string name="allergy_environment_113">Mold</string>
+    <string name="allergy_environment_114">Perfume</string>
+    <string name="allergy_environment_115">Cosmetics</string>
+    <string name="allergy_environment_116">Semen</string>
+    <string name="allergy_environment_117">Latex</string>
+    <string name="allergy_environment_118">Water smoke</string>
+    <string name="allergy_environment_119">House dust mite</string>
+    <string name="allergy_environment_120">Nickel (nickel sulfate hexahydrate)</string>
+    <string name="allergy_environment_121">Gold (gold sodium thiosulfate)</string>
+    <string name="allergy_environment_122">Chromium</string>
+    <string name="allergy_environment_123">Cobalt chloride</string>
+    <string name="allergy_environment_124">Formaldehyde</string>
+    <string name="allergy_environment_125">Photographic developers</string>
+    <string name="allergy_environment_126">Fungicide</string>
+    <string name="allergy_environment_128">Others ( Environment )</string>
+
+    <!-- A L L E R G Y  E N V I R O N M E N T  URL -->
+    <string name="allergy_environment_url">https://www.sinuswars.com/Environmental_Allergies.asp</string>
+
+    <!-- A L L E R G Y  M E D I C A T I O N  L I S T -->
+    <string name="allergy_medication_100">Tetracycline</string>
+    <string name="allergy_medication_101">Dilantin</string>
+    <string name="allergy_medication_102">Tegretol (carbamazepine)</string>
+    <string name="allergy_medication_103">Penicillin</string>
+    <string name="allergy_medication_104">Cephalosporins</string>
+    <string name="allergy_medication_105">Sulfonamides</string>
+    <string name="allergy_medication_106">Non-steroidal anti-inflammatories(cromolyn sodium, nedocromil sodium, etc.)</string>
+    <string name="allergy_medication_107">Intravenous contrast dye</string>
+    <string name="allergy_medication_108">Local anesthetics</string>
+    <string name="allergy_medication_129">Others ( Medication )</string>
+
+    <!-- A L L E R G Y  M E D I C A T I O N  URL -->
+    <string name="allergy_medication_url">https://www.sinuswars.com/Drug_or_medication_allergies.asp</string>
+
+    <!-- P R E G N A N C Y  -->
+    <string name="preg_detail">Pregnancy Detail</string>Age of Onset of menses
+    <string name="preg_1">Age of Onset of menses</string>
+    <string name="preg_2">Last menstrual cycle</string>
+    <string name="preg_3">Have your ever been pregnant ?</string>
+    <string name="preg_4">No. of full term pregnancy ?</string>
+    <string name="preg_5">No. of pre term pregnancy ?</string>
+    <string name="preg_6">No. of abortions ?</string>
+    <string name="preg_7">No. of Living children ?</string>
+
+    <string name="click_on_edit_text">Click on the Edit button to edit</string>
+    <string name="s_gender">Select Gender</string>
+    <string name="select_gender">Please Select Gender</string>
+    <string name="s_blood_group">Select Blood Group</string>
+    <string name="select_blood_group">Please Select Blood Group</string>
+    <string name="duration">Select Duration</string>
+    <string name="select_duration">Please Select Duration</string>
+    <string name="reaction">Select Reaction</string>
+    <string name="select_reaction">Please Select Reaction</string>
+    <string name="dose">Select Dose</string>
+    <string name="select_dose">Please Select Dose</string>
+    <string name="unit">Select Unit</string>
+    <string name="select_unit">Please Select Unit</string>
+    <string name="frequency">Select Frequency</string>
+    <string name="select_frequency">Please Select Frequency</string>
+    <string name="title_activity_change_password">ChangePasswordActivity</string>
+    <string name="title_activity_chat">Chat Window</string>
+    <string name="title_activity_chat_rate">Feedback</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="title_activity_doctor_splash">DoctorSplashActivity</string>
+    <string name="title_activity_doctor_login">Doctor Login</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email (admin)</string>
+    <string name="prompt_password">Password (12345)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_main_doctor">MainDoctorActivity</string>
+    <string name="title_activity_consultation_person">Instant Consultation</string>
+    <string name="title_activity_consultation_form">Patient Form</string>
+    <string name="title_activity_consultation_problem">Symptoms</string>
+    <string name="title_activity_consultation_description">Description</string>
+    <string name="title_activity_consultation_loader">Searching ...</string>
+    <string name="title_activity_consultation_doctor">Doctor Profile</string>
+    <string name="title_activity_consultation_history">Consultation History</string>
+    <string name="title_activity_health_records">Health Records</string>
+    <string name="title_activity_health_education">Health Education</string>
+
+</resources>

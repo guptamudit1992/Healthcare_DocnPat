@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/addSearchRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mh"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <!-- S E A R C H   B A R -->
+        <LinearLayout
+            android:id="@+id/searchBoxLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/mh"
+            android:orientation="horizontal"
+            android:padding="1dp"
+            android:weightSum="10">
+
+            <!-- S E A R C H   L A B E L -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="@color/mh"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/search"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+
+            <!-- S E A R C H   F I E L D -->
+            <EditText
+                android:id="@+id/editTextSearch"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:background="@color/white"
+                android:hint="@string/medication_search_hint"
+                android:textColorHint="@color/hint_text_color"
+                android:padding="10dp"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- S E A R C H   C O N T E N T -->
+    <LinearLayout
+        android:id="@+id/middleLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchLayout"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <!-- L O A D E R -->
+        <LinearLayout
+            android:id="@+id/loader_search"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:gravity="center">
+
+            <ProgressBar
+                android:id="@+id/loader_progressbar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="15dp" />
+
+            <TextView
+                android:id="@+id/loader_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/load_ing"
+                android:textSize="16sp"
+                android:textColor="@color/hb_mp_card"/>
+
+        </LinearLayout>
+
+        <!-- E M P T Y   C O N T A I N E R -->
+        <TextView
+            android:id="@+id/empty_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:gravity="center"
+            android:text="@string/err_no_search_result"
+            android:lineSpacingExtra="5sp"
+            android:padding="15dp"
+            android:textColor="@color/text_color"/>
+
+        <!-- E R R O R   C O N T A I N E R -->
+        <TextView
+            android:id="@+id/error_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:gravity="center"
+            android:text="@string/err_error_search_result"
+            android:lineSpacingExtra="5sp"
+            android:padding="15dp"
+            android:textColor="@color/text_color"/>
+
+        <!-- I N T E R N E T   F A I L U R E   C O N T A I N E R -->
+        <TextView
+            android:id="@+id/internet_failure_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:gravity="center"
+            android:text="@string/err_internet_failure_search_result"
+            android:lineSpacingExtra="5sp"
+            android:padding="15dp"
+            android:textColor="@color/text_color"/>
+
+        <!-- S E A R C H   P R O B L E M S -->
+        <ListView
+            android:id="@+id/listViewSerachMP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+
+
+        <!-- D A T A   F I E L D S -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/addLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/mh"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!-- N A M E   O F   M E D I C I N E -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"
+                        android:text="@string/med_8"
+                        android:textColor="@color/mh"
+                        android:textSize="15sp" />
+
+                    <!-- P R O B L E M   H Y P E R L I N K -->
+                    <TextView
+                        android:id="@+id/problem_hyperlink"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/nameOfMedication"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:gravity="right"
+                        android:maxLines="1"
+                        android:minLines="1"
+                        android:textColor="@color/mh"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+
+                <!-- D O S E -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:text="@string/med_3"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <Spinner
+                        android:id="@+id/doses_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:gravity="right"
+                        android:spinnerMode="dropdown" />
+
+                </LinearLayout>
+
+                <!-- U N I T S -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:maxLines="1"
+                        android:minLines="1"
+                        android:text="@string/med_2"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <Spinner
+                        android:id="@+id/units_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:gravity="right"
+                        android:spinnerMode="dropdown" />
+
+                </LinearLayout>
+
+                <!-- F R E Q U E N C Y -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:text="@string/med_4"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <Spinner
+                        android:id="@+id/frequency_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:gravity="right"
+                        android:spinnerMode="dropdown" />
+
+                </LinearLayout>
+
+                <!-- C O N T I N U I N G   M E D I C A T I O N -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="9"
+                        android:text="@string/med_5"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <CheckBox
+                        android:id="@+id/contiMedication"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:buttonTint="@color/white"
+                        android:checked="true" />
+
+                </LinearLayout>
+
+                <!-- D U R A T I O N -->
+                <LinearLayout
+                    android:id="@+id/durationLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:visibility="gone"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:text="@string/med_6"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <Spinner
+                        android:id="@+id/duration_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:gravity="right"
+                        android:spinnerMode="dropdown" />
+
+                </LinearLayout>
+
+                <!-- S T A R T   D A T E -->
+                <LinearLayout
+                    android:id="@+id/start_date_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:text="@string/start_date"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/start_date_textview"
+                        style="@android:style/Widget.EditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:drawableRight="@drawable/ic_white_datepicker"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical|right"
+                        android:padding="10dp"
+                        android:background="@color/mh"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <!-- E N D   D A T E -->
+                <LinearLayout
+                    android:id="@+id/end_date_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:visibility="visible"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:text="@string/end_date"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/end_date_textview"
+                        style="@android:style/Widget.EditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:drawableRight="@drawable/ic_white_datepicker"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical|right"
+                        android:background="@color/mh"
+                        android:padding="10dp"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+
+                <!-- C O M M E N T S -->
+                <EditText
+                    android:id="@+id/comments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/rectangle_editfield"
+                    android:gravity="top|left"
+                    android:hint="@string/med_comments_hint"
+                    android:textColorHint="@color/hint_text_color"
+                    android:inputType="textMultiLine"
+                    android:lines="8"
+                    android:maxLines="10"
+                    android:minLines="3"
+                    android:maxLength="180"
+                    android:scrollbars="vertical"
+                    android:textSize="14sp" />
+
+
+                <!-- S A V E -->
+                <TextView
+                    android:id="@+id/save"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/rectangle_editfield"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:elevation="2dp"
+                    android:text="@string/save"
+                    android:textColor="@color/mh" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>
+

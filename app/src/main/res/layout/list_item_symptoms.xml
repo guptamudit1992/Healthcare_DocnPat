@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- M O D E L   D A T A -->
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="data"
+            type="com.careons.app.Patient.Database.Models.Consultation.Consultation" />
+
+        <variable
+            name="handlers"
+            type="com.careons.app.Patient.Database.Handlers.Consultation.ConsultationHandler" />
+
+    </data>
+
+
+    <!-- C O N T E N T -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:onClick="@{handlers.symptomSelectionToggle}">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:gravity="center"
+            android:padding="3dp">
+
+            <TextView
+                android:id="@+id/symptom_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="9"
+                android:text="@{data.name}"
+                android:tag="@{data.isSelected}"
+                android:gravity="center_vertical"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:id="@+id/symptom_unselected"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:layout_gravity="right"
+                android:visibility='@{data.isSelected ? View.GONE : View.VISIBLE}'
+                android:src="@drawable/grey_check"/>
+
+            <ImageView
+                android:id="@+id/symptom_selected"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:layout_gravity="right"
+                android:visibility='@{data.isSelected ? View.VISIBLE : View.GONE}'
+                android:src="@drawable/red_check"/>
+
+        </LinearLayout>
+
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/light_grey"
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+
+</layout>

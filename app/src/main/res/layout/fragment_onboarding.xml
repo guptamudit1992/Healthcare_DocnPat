@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/onboarding_holder"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- S H A R E   I M A G E -->
+    <ImageView
+        android:id="@+id/onboarding_banner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <!-- D E S C R I P T I V E   T E X T -->
+    <TextView
+        android:id="@+id/desc_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/card_message"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:lineSpacingExtra="5dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="25dp"
+        android:textColor="@color/white"
+        android:background="#80000000"/>
+
+</RelativeLayout>

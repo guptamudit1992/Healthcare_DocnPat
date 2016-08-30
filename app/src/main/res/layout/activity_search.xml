@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Patient.Activity.Main.HealthSearch.SearchActivity">
+
+    <!-- T O O L B A R -->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:background="@color/white">
+
+        <!-- S E A R C H   B A R -->
+        <include
+            layout="@layout/content_health_search" />
+
+        <!-- T I T L E -->
+        <!--TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/search_options"
+            android:textColor="@color/grey"
+            android:padding="10dp"
+            android:background="#20000000" /-->
+
+
+        <!-- L O A D E R -->
+        <include
+            layout="@layout/item_loader" />
+
+
+        <!-- E M P T Y   C O N T A I N E R -->
+        <TextView
+            android:id="@+id/empty_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:gravity="center"
+            android:text="@string/err_error_health_search_result"
+            android:lineSpacingExtra="5sp"
+            android:padding="15dp"
+            android:textColor="@color/text_color"/>
+
+        <!-- E R R O R   C O N T A I N E R -->
+        <TextView
+            android:id="@+id/error_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:gravity="center"
+            android:text="@string/err_error_health_search_result"
+            android:lineSpacingExtra="5sp"
+            android:padding="15dp"
+            android:textColor="@color/text_color"/>
+
+        <!-- I N T E R N E T   F A I L U R E   C O N T A I N E R -->
+        <TextView
+            android:id="@+id/internet_failure_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:gravity="center"
+            android:text="@string/err_internet_failure_search_result"
+            android:lineSpacingExtra="5sp"
+            android:padding="15dp"
+            android:textColor="@color/text_color"/>
+
+        <!-- S E A R C H   L I S T -->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/hs_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

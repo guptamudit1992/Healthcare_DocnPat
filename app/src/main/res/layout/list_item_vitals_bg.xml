@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- D A T A -->
+    <data>
+
+        <import
+            type="android.view.View"/>
+
+        <variable
+            name="handlers"
+            type="com.careons.app.Patient.Database.Handlers.Vitals.BloodGlucoseHandler"/>
+
+        <variable
+            name="data"
+            type="com.careons.app.Patient.Database.Models.Vitals.BloodGlucose"/>
+
+    </data>
+
+
+    <!-- C O N T E N T -->
+    <LinearLayout
+        android:id="@+id/vitals_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="1dp"
+        android:background="@color/light_grey">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="10"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <!-- D A T A -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:orientation="vertical">
+
+                    <!-- D A T E -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@{data.date + "  " + data.time}'
+                        android:textColor="@color/text_color"
+                        android:textSize="12sp"
+                        android:paddingBottom="5dp"/>
+
+
+                    <!-- V A L U E -->
+                    <TextView
+                        android:id="@+id/update_blood_glucose_edittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{data.bloodGlucose}"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_color"/>
+
+                </LinearLayout>
+
+                <!-- A C T I O N -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:orientation="horizontal"
+                    android:gravity="right">
+
+                    <!-- E D I T -->
+                    <ImageView
+                        android:id="@+id/update_imageView"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_hb_edit"
+                        android:clickable="true"
+                        android:tag="@{data.bgId}"
+                        android:onClick="@{handlers.onUpdate}"/>
+
+                    <!-- D E L E T E -->
+                    <ImageView
+                        android:id="@+id/delete_imageView"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_hb_delete"
+                        android:clickable="true"
+                        android:tag="@{data.bgId}"
+                        android:onClick="@{handlers.onDelete}"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- V A L U E -->
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/light_grey">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{data.checkup}"
+                        android:textSize="12sp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="25dp"
+                        android:gravity="center"
+                        android:textColor="@color/text_color"/>
+
+                </android.support.v7.widget.CardView>
+
+                <!-- T A G -->
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor='@{data.tag.equals(@string/normal) ? @color/normal : (data.tag.equals(@string/high) ? @color/high : @color/alarming)}'>
+
+                    <TextView
+                        android:id="@+id/tag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@{data.tag + " " + @string/blood_glucose}'
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:textSize="11sp"
+                        android:textColor="@color/white" />
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+
+            <!-- H E L P   T E X T -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="@{data.tag.equals(@string/alarming) ? View.VISIBLE : View.GONE}"
+                android:lineSpacingExtra="5sp"
+                android:textSize="12sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/hint_text_color"
+                android:text="@string/alarming_help_bg"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,143 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+    maven { url "https://jitpack.io" }
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    // Default Config
+    defaultConfig {
+        applicationId "com.careons.app"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 8
+        versionName "1.0.9"
+    }
+
+    // To Handle Service URLs final API
+    productFlavors {
+
+        patientdev {
+
+        }
+
+        patientproduction {
+
+        }
+
+        doctordev {
+
+        }
+
+        doctorproduction {
+
+        }
+    }
+
+    // To Handle minify final API
+    buildTypes {
+
+        debug {
+
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    // To surpass constructor in Fragment error
+    lintOptions {
+
+        abortOnError false
+        checkReleaseBuilds false
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE-FIREBASE.txt'
+        exclude 'META-INF/NOTICE'
+    }
+}
+
+dependencies {
+
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:support-v4:23.1.1'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+
+    // Volley Framework
+    compile 'com.mcxiaoke.volley:library:1.0.+'
+
+    // Image Placeholder Library
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+
+    // Card View Support Library
+    compile 'com.android.support:cardview-v7:23.1.1'
+
+    // Recycler View Support Library
+    compile 'com.android.support:recyclerview-v7:23.1.1'
+
+    // View Pager Indicator Support Library
+    compile 'com.viewpagerindicator:library:2.4.1@aar'
+
+    // Floating Action Button Library
+    compile 'com.github.clans:fab:1.6.2'
+
+    // Mixpanel Support Library
+    compile "com.mixpanel.android:mixpanel-android:4.8.0"
+
+    // Fabric Crashlytics Support Library
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.5@aar') {
+        transitive = true;
+    }
+
+    // Facebook Support Library
+    compile 'com.facebook.android:facebook-android-sdk:4.6.0'
+
+    // Date and Time Picker Support Library
+    compile 'com.wdullaer:materialdatetimepicker:2.0.2'
+
+    // MP Android Chart Support Library
+    compile 'com.github.PhilJay:MPAndroidChart:v2.2.2'
+
+    // Picasso Support Library
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+    // Sugar ORM Support Library
+    compile 'com.github.satyan:sugar:1.5'
+
+    // Dependency for Google Sign-In
+    compile 'com.google.android.gms:play-services-auth:8.4.0'
+
+    // Dependency for Microsoft Azure BLOB (Binary Large OBject) Support
+    compile 'com.microsoft.azure.android:azure-storage-android:0.7.0@aar'
+
+    // Firebase Support Library
+    compile 'com.firebase:firebase-client-android:2.5.2+'
+}

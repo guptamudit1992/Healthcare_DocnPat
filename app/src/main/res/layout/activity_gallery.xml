@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/quickreturn_coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- T O O L B A R -->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <!-- C A T E G O R Y -->
+            <Spinner
+                android:id="@+id/category_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <!-- C O N T E N T -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:background="@color/white">
+
+
+        <!-- F I L T E R S -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:background="@color/light_grey"
+            android:paddingBottom="1dp">
+
+            <!-- S O R T -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sort"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:background="@color/light_grey"/>
+
+                <Spinner
+                    android:id="@+id/sort_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- G A L L E R Y   G R I D -->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/masonry_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"/>
+
+    </LinearLayout>
+
+
+    <!-- F A B   M E N U -->
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/fab_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:layout_gravity="end"
+        android:elevation="6dp"
+        fab:menu_labels_singleLine="true">
+
+        <!-- G A L L E R Y -->
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_ud_gallery"
+            app:fab_colorNormal="@color/fab_yellow"
+            app:fab_colorRipple="@color/fab_yellow"
+            app:fab_colorPressed="@color/fab_yellow"
+            fab:fab_size="normal"
+            fab:fab_label="@string/choose_gallery" />
+
+        <!-- C A M E R A -->
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_ud_camera"
+            app:fab_colorNormal="@color/onboarding_blue"
+            app:fab_colorRipple="@color/onboarding_blue"
+            app:fab_colorPressed="@color/onboarding_blue"
+            fab:fab_size="normal"
+            fab:fab_label="@string/camera" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</android.support.design.widget.CoordinatorLayout>

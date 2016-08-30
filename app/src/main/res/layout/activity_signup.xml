@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background">
+
+
+    <!-- L O G I N   C A R D -->
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="25dp"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardElevation="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- H E A D E R -->
+            <TextView
+                style="@style/auth_card_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/create_account" />
+
+            <ScrollView
+                android:id="@+id/scrollBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- D E T A I L -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/card_light_grey"
+                    android:orientation="vertical"
+                    android:padding="25dp">
+
+                    <!-- L O G I N   D E T A I L S -->
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        card_view:cardCornerRadius="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <!-- U S E R N A M E -->
+                            <EditText
+                                android:id="@+id/signup_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/card_gradient_dark_grey"
+                                android:hint="@string/signup_name"
+                                android:inputType="textCapWords"
+                                android:padding="15dp"
+                                android:textColor="@color/card_text_color"
+                                android:textColorHint="@color/card_text_color"
+                                android:textCursorDrawable="@drawable/color_cursor_primary"
+                                android:textSize="13sp" />
+
+
+                            <!-- D I V I D E R -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.1dp"
+                                android:background="@color/card_gradient_light_grey" />
+
+                            <!-- E M A I L -->
+                            <EditText
+                                android:id="@+id/signup_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/card_gradient_dark_grey"
+                                android:hint="@string/signup_email"
+                                android:inputType="textEmailAddress"
+                                android:padding="15dp"
+                                android:textColor="@color/card_text_color"
+                                android:textColorHint="@color/card_text_color"
+                                android:textCursorDrawable="@drawable/color_cursor_primary"
+                                android:textSize="13sp" />
+
+                            <!-- D I V I D E R -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.1dp"
+                                android:background="@color/card_gradient_light_grey" />
+
+                            <!-- P A S S W O R D -->
+                            <EditText
+                                android:id="@+id/signup_pwd"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/card_gradient_dark_grey"
+                                android:hint="@string/signup_pwd"
+                                android:padding="15dp"
+                                android:inputType="textPassword"
+                                android:fontFamily="sans-serif"
+                                android:textColor="@color/card_text_color"
+                                android:textColorHint="@color/card_text_color"
+                                android:textSize="13sp" />
+
+
+                            <!-- D I V I D E R -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.1dp"
+                                android:background="@color/card_gradient_light_grey" />
+
+                            <!-- C O N F I R M   P A S S W O R D -->
+                            <EditText
+                                android:id="@+id/signup_confirm_pwd"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/card_gradient_dark_grey"
+                                android:hint="@string/signup_confirm_pwd"
+                                android:inputType="textPassword"
+                                android:fontFamily="sans-serif"
+                                android:padding="15dp"
+                                android:textColor="@color/card_text_color"
+                                android:textColorHint="@color/card_text_color"
+                                android:textSize="13sp" />
+
+                            <!-- D I V I D E R -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.1dp"
+                                android:background="@color/card_gradient_light_grey" />
+
+                            <!-- P H O N E -->
+                            <EditText
+                                android:id="@+id/phone_no"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/card_gradient_dark_grey"
+                                android:hint="@string/signup_phone"
+                                android:maxLength="10"
+                                android:inputType="number"
+                                android:padding="15dp"
+                                android:textColor="@color/card_text_color"
+                                android:textColorHint="@color/card_text_color"
+                                android:textCursorDrawable="@drawable/color_cursor_white"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                    <!-- A C T I O N   B U T T O N S -->
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginTop="30dp"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:cardElevation="10dp">
+
+                        <TextView
+                            android:id="@+id/signup_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/card_login"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:onClick="signupRequest"
+                            android:padding="10dp"
+                            android:text="@string/confirm"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

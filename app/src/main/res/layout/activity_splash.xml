@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Patient.Activity.Splash.SplashActivity">
+
+    <!-- S P L A S H   S C R E E N   L O G O -->
+    <ImageView
+        android:id="@+id/cm_splash_logo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="50dp"
+        android:src="@drawable/splash_logo"/>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/card_gradient_dark_grey"
+    android:padding="5dp">
+
+    <!-- D A T E -->
+    <TextView
+        android:id="@+id/dialog_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/white"/>
+
+
+    <!-- C O N T E N T -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:divider="@drawable/divider_dark"
+        android:showDividers="middle">
+
+        <!-- S Y S T O L I C   B P -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:text="@string/vitals_bp_card_Sys"/>
+
+            <TextView
+                android:id="@+id/dialog_sys"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:paddingTop="10dp"
+                android:gravity="center"
+                android:textSize="24sp"/>
+
+        </LinearLayout>
+
+
+        <!-- D I A S T O L I C   B P -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:text="@string/vitals_bp_card_Dys"/>
+
+            <TextView
+                android:id="@+id/dialog_dys"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:paddingTop="10dp"
+                android:gravity="center"
+                android:textSize="24sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

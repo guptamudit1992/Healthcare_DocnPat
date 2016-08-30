@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background">
+
+
+    <!-- C R E A T E   C A R D -->
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        card_view:cardElevation="6dp"
+        card_view:cardCornerRadius="10dp"
+        android:layout_margin="25dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- H E A D E R -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/create_account"
+                style="@style/auth_card_title"/>
+
+            <ScrollView
+                android:id="@+id/scrollBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- D E T A I L -->
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="25dp"
+                android:background="@color/card_light_grey">
+
+                <!-- L O G I N   D E T A I L S -->
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    card_view:cardCornerRadius="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <!-- D A T E   O F   B I R T H -->
+                        <TextView
+                            android:id="@+id/dob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/signup_dob"
+                            android:gravity="start|center"
+                            android:textSize="13sp"
+                            android:textColor="@color/card_text_color"
+                            android:textColorHint="@color/card_text_color"
+                            android:padding="15dp"
+                            android:background="@color/card_gradient_dark_grey"/>
+
+                        <!-- D I V I D E R -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="@color/card_gradient_light_grey"/>
+
+                        <!-- G E N D E R -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="5dp"
+                            android:background="@color/card_gradient_dark_grey">
+
+                            <!-- D R O P D O W N -->
+                            <Spinner
+                                android:id="@+id/gender_spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:spinnerMode="dropdown"/>
+
+                        </LinearLayout>
+
+                        <!-- D I V I D E R -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="@color/card_gradient_light_grey"/>
+
+                        <!-- H E I G H T -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:divider="@drawable/divider_dark"
+                            android:showDividers="middle"
+                            android:weightSum="2">
+
+                            <!-- F E E T -->
+                            <EditText
+                                android:id="@+id/height_ft"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/height_ft_hint"
+                                android:inputType="number"
+                                android:focusable="false"
+                                android:maxLength="2"
+                                android:textSize="13sp"
+                                android:textColor="@color/card_text_color"
+                                android:textColorHint="@color/card_text_color"
+                                android:textCursorDrawable="@drawable/color_cursor_primary"
+                                android:padding="15dp"
+                                android:background="@color/card_gradient_dark_grey"/>
+
+                            <!-- I N C H E S -->
+                            <EditText
+                                android:id="@+id/height_inc"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:hint="@string/height_inc_hint"
+                                android:focusable="false"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:textSize="13sp"
+                                android:textColor="@color/card_text_color"
+                                android:textColorHint="@color/card_text_color"
+                                android:textCursorDrawable="@drawable/color_cursor_primary"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:background="@color/card_gradient_dark_grey"/>
+
+                        </LinearLayout>
+
+                        <!-- D I V I D E R -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="@color/card_gradient_light_grey"/>
+
+                        <!-- W E I G H T -->
+                        <EditText
+                            android:id="@+id/weight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/weight_hint"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:focusable="false"
+                            android:textSize="13sp"
+                            android:textColor="@color/card_text_color"
+                            android:textColorHint="@color/card_text_color"
+                            android:textCursorDrawable="@drawable/color_cursor_primary"
+                            android:padding="15dp"
+                            android:background="@color/card_gradient_dark_grey"/>
+
+                        <!-- D I V I D E R -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:background="@color/card_gradient_light_grey"/>
+
+                        <!-- B L O O D   G R O U P -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="5dp"
+                            android:background="@color/card_gradient_dark_grey">
+
+                            <!-- D R O P D O W N -->
+                            <Spinner
+                                android:id="@+id/blood_group_spinner"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="9"
+                                android:spinnerMode="dropdown" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+                <!-- A C T I O N   B U T T O N S -->
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    card_view:cardElevation="10dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="30dp"
+                    card_view:cardCornerRadius="5dp">
+
+                    <TextView
+                        android:id="@+id/signup_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/done"
+                        android:background="@color/card_login"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        android:clickable="true"
+                        android:onClick="createAccountRequest"/>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

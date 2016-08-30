@@ -1,0 +1,70 @@
+{
+  "project_info": {
+    "project_id": "careons-1233",
+    "project_number": "298087874325",
+    "name": "careons"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:298087874325:android:e0016c3eeb7c98db",
+        "client_id": "android:com.careons.app",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "com.careons.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "298087874325-7bia8hars27h227rliht546pjsddo284.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.careons.app",
+            "certificate_hash": "CD944D3D094E10E68B4E6A24AF0FFCD35460D391"
+          }
+        },
+        {
+          "client_id": "298087874325-210tn8cnb3bor3eci4ai4bcu0811afbc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.careons.app",
+            "certificate_hash": "0D13E50247B1E2BFAFFA1ACF112394A47B1B5EF1"
+          }
+        },
+        {
+          "client_id": "298087874325-ltid1aedrh3fkb5i20lppo6f2en7hl6r.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "298087874325-6r6kqlk9vflbhmfdn6pvi7vrdg4unj70.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-74451758-1"
+          }
+        },
+        "cloud_messaging_service": {
+          "status": 1,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 2
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "client_info": [],
+  "ARTIFACT_VERSION": "1"
+}

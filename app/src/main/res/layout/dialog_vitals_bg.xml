@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+            <!-- C A N C E L -->
+            <ImageView
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="5dp"
+                android:src="@drawable/cance_ffffff" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- H E A D E R -->
+                <LinearLayout
+                    android:id="@+id/add_entry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    android:weightSum="10">
+
+                    <!-- I C O N -->
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:src="@drawable/ic_add_circle_outline_white_24dp" />
+
+                    <!-- T I T L E -->
+                    <TextView
+                        android:id="@+id/dialog_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center|start"
+                        android:text="@string/vitals_bg_add"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <!-- D I V I D E R -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="@color/white" />
+
+                <!-- B L O O D   G L U C O S E -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:weightSum="2">
+
+                        <!-- T I T L E -->
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="start|center_vertical"
+                            android:lineSpacingExtra="3sp"
+                            android:text="@string/vitals_bg_text"
+                            android:textColor="@color/white" />
+
+                        <!-- V A L U E -->
+                        <EditText
+                            android:id="@+id/bg_edittext"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/line_white"
+                            android:gravity="center"
+                            android:hint="eg: 120"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:padding="10dp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/hint_text_color"
+                            android:textCursorDrawable="@drawable/color_cursor_white"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <!-- D A T E -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:weightSum="2">
+
+                        <!-- T I T L E -->
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="start|center_vertical"
+                            android:lineSpacingExtra="3sp"
+                            android:text="@string/select_date"
+                            android:textColor="@color/white" />
+
+                        <!-- V A L U E -->
+                        <TextView
+                            android:id="@+id/date_textview"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/line_white"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textColor="@color/white"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                    <!-- T I M E -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:weightSum="2">
+
+                        <!-- T I T L E -->
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="start|center_vertical"
+                            android:lineSpacingExtra="3sp"
+                            android:text="@string/select_time"
+                            android:textColor="@color/white" />
+
+                        <!-- V A L U E -->
+                        <TextView
+                            android:id="@+id/time_textview"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/line_white"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:textColor="@color/white"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- S E L E C T O R -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/white"
+                    android:divider="@drawable/divider_white"
+                    android:orientation="horizontal"
+                    android:padding="0.1dp"
+                    android:showDividers="middle"
+                    android:weightSum="3">
+
+                    <!-- R A N D O M -->
+                    <TextView
+                        android:id="@+id/checkup_random"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="@string/random"
+                        android:textColor="@color/colorPrimary" />
+
+                    <!-- F A S T I N G -->
+                    <TextView
+                        android:id="@+id/checkup_fasting"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="@string/pre_meal"
+                        android:textColor="@color/white" />
+
+                    <!-- P O S T   M E A L -->
+                    <TextView
+                        android:id="@+id/checkup_post_meal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="@string/post_meal"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <!-- S E L E C T O R   D E S C R I P T I O N -->
+                <TextView
+                    android:id="@+id/selector_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="4sp"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="@string/random_desc"
+                    android:textColor="@color/white" />
+
+                <!-- A C T I O N   B U T T O N S -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="@color/white"
+                    android:padding="0.1dp">
+
+                    <TextView
+                        android:id="@+id/save_entry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:padding="15dp"
+                        android:text="@string/save_vitals_bg"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

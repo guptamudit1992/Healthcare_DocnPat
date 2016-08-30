@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <!--A D D  L A Y O U T -->
+    <include
+        layout="@layout/content_fragment_add_allergy" />
+
+    <!-- L O A D E R -->
+    <include
+        layout="@layout/item_loader" />
+
+
+    <!-- L I S T   O F   A L L E R G Y -->
+    <android.support.v7.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/allergy_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <!-- F A B -->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add_white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="16dp" />
+
+</RelativeLayout>

@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- M O D E L   D A T A -->
+    <data>
+
+        <variable
+            name="data"
+            type="com.careons.app.Patient.Database.Models.Healthbook.Medication" />
+
+        <variable
+            name="handlers"
+            type="com.careons.app.Patient.Database.Handlers.Healthbook.MedicationHandler" />
+    </data>
+
+
+    <!-- C O N T E N T -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey"
+        android:orientation="vertical"
+        android:paddingBottom="1dp">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/medical_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/mh"
+            app:elevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!-- T O O L B A R -->
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/card_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:onClick="@{handlers.toggleContent}">
+
+                    <!-- T I T L E -->
+                    <TextView
+                        android:id="@+id/toolbar_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@{data.continuingMedication ? @drawable/status_active : @drawable/status_inactive}"
+                        android:drawablePadding="10dp"
+                        android:text="@{data.medicationName}"
+                        android:textColor="@{data.continuingMedication ? @color/text_color : @color/grey}"
+                        android:textSize="16sp" />
+
+                </android.support.v7.widget.Toolbar>
+
+
+                <!-- C A R D  C O N T E N T -->
+                <LinearLayout
+                    android:id="@+id/card_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="vertical">
+
+                    <!-- E X P A N D A B L E   C O N T E N T -->
+                    <LinearLayout
+                        android:id="@+id/view_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/mh"
+                        android:orientation="vertical">
+
+                        <!-- D O S E -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="7"
+                                android:text="@string/med_3"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/doses"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:gravity="right"
+                                android:text="@{data.doses}"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+
+                        <!-- U N I T S -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="7"
+                                android:text="@string/med_2"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/unitsTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:gravity="right"
+                                android:text="@{data.units}"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+
+                        <!-- F R E Q U E N C Y -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="6"
+                                android:text="@string/med_4"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/frequency"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:gravity="right"
+                                android:text="@{data.frequency}"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+
+                        <!-- C O N T I N U I N G    M E D I C A T I O N -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="8"
+                                android:text="@string/med_5"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:gravity="right"
+                                android:text='@{data.continuingMedication ? @string/yes : @string/no}'
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+
+                        <!-- D U R A T I O N -->
+                        <LinearLayout
+                            android:id="@+id/durationDispLinearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="6"
+                                android:text="@string/med_6"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/duration"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:gravity="right"
+                                android:text="@{data.duration}"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+
+                        <!-- S T A R T   D A T E -->
+                        <LinearLayout
+                            android:id="@id/startDateDispLinearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="6"
+                                android:text="@string/start_date"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/sinceWhen"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:gravity="right"
+                                android:text="@{data.sinceWhen}"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+
+                        <!-- E N D   D A T E -->
+                        <LinearLayout
+                            android:id="@+id/endDateDispLinearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="6"
+                                android:text="@string/med_7"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/endDate"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:gravity="right"
+                                android:text="@{data.endDate}"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+
+                        <!-- C O M M E N T S -->
+                        <TextView
+                            android:id="@+id/commentsTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/rectangle_editfield"
+                            android:gravity="top|left"
+                            android:inputType="textMultiLine"
+                            android:lines="8"
+                            android:maxLines="10"
+                            android:minLines="3"
+                            android:padding="10dp"
+                            android:scrollbars="vertical"
+                            android:text="@{data.comments}"
+                            android:textColor="@color/text_color"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+
+                    <!-- L O A D E R -->
+                    <!--include
+                        layout="@layout/loader" /-->
+
+
+                    <!-- U P D A T E -->
+                    <LinearLayout
+                        android:id="@+id/update_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/mh"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <!-- D O S E -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:text="@string/med_3"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                            <Spinner
+                                android:id="@+id/doses_spinner"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:gravity="right"
+                                android:spinnerMode="dropdown" />
+
+                        </LinearLayout>
+
+                        <!-- U N I T S -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:text="@string/med_2"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                            <Spinner
+                                android:id="@+id/units_spinner"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:spinnerMode="dropdown" />
+
+                        </LinearLayout>
+
+                        <!-- F R E Q U E N C Y -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:text="@string/med_4"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                            <Spinner
+                                android:id="@+id/frequency_spinner"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:gravity="right"
+                                android:spinnerMode="dropdown" />
+
+                        </LinearLayout>
+
+                        <!-- C O N T I N U I N G    M E D I C A T I O N -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:orientation="horizontal"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="9"
+                                android:text="@string/med_5"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                            <CheckBox
+                                android:id="@+id/contiMedicationUpdate"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:buttonTint="@color/white"
+                                android:checked="@{data.continuingMedication}" />
+
+                        </LinearLayout>
+
+                        <!-- D U R A T I O N -->
+                        <LinearLayout
+                            android:id="@+id/editableDurationLinearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:text="@string/med_6"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                            <Spinner
+                                android:id="@+id/duration_spinner"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:gravity="right"
+                                android:spinnerMode="dropdown" />
+
+                        </LinearLayout>
+
+
+                        <!-- S T A R T   D A T E -->
+                        <LinearLayout
+                            android:id="@+id/editableStartDateLinearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:text="@string/start_date"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/start_date_textview"
+                                style="@android:style/Widget.EditText"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="6"
+                                android:drawableRight="@drawable/ic_white_datepicker"
+                                android:drawablePadding="10dp"
+                                android:background="@color/mh"
+                                android:gravity="center_vertical|right"
+                                android:padding="10dp"
+                                android:text="@{data.sinceWhen}"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <!-- E N D   D A T E -->
+                        <LinearLayout
+                            android:id="@+id/editableEndDateLinearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:orientation="horizontal"
+                            android:padding="10dp"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:text="@string/med_7"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/end_date_textview"
+                                style="@android:style/Widget.EditText"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="6"
+                                android:drawableRight="@drawable/ic_white_datepicker"
+                                android:drawablePadding="10dp"
+                                android:background="@color/mh"
+                                android:gravity="center_vertical|right"
+                                android:padding="10dp"
+                                android:text="@{data.endDate}"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+
+                        <!-- C O M M E N T S   T I T L E -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/comments"
+                            android:paddingTop="10dp"
+                            android:paddingLeft="15dp"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                        <!-- C O M M E N T S -->
+                        <EditText
+                            android:id="@+id/commentsUpdate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/rectangle_editfield"
+                            android:gravity="top|left"
+                            android:hint="@string/med_comments_hint"
+                            android:inputType="textMultiLine"
+                            android:textColorHint="@color/hint_text_color"
+                            android:lines="8"
+                            android:maxLines="10"
+                            android:minLines="3"
+                            android:maxLength="180"
+                            android:scrollbars="vertical"
+                            android:text="@{data.comments}"
+                            android:textSize="14sp" />
+
+                        <!-- H Y P E R L I N K -->
+                        <TextView
+                            android:id="@+id/hyperlink"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@{data.hyperlink}"/>
+
+                        <!-- S A V E -->
+                        <TextView
+                            android:id="@+id/saveUpdate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:background="@drawable/rectangle_editfield"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:onClick="@{handlers.save}"
+                            android:padding="10dp"
+                            android:elevation="2dp"
+                            android:text="@string/save_changes"
+                            android:textColor="@color/mh" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</layout>

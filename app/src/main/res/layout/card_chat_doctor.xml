@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- M O D E L   D A T A -->
+    <data>
+
+        <import type="android.view.View"/>
+        <import type="android.view.Gravity"/>
+
+        <variable
+            name="data"
+            type="com.careons.app.Patient.Database.Models.Chat.Chat" />
+
+        <variable
+            name="handlers"
+            type="com.careons.app.Patient.Database.Handlers.Consultation.ChatHandler" />
+
+    </data>
+
+
+    <!-- C O N T E N T -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@{data.sendSelf ? @dimen/chat_margin : @dimen/chat_no_margin}"
+        android:paddingRight="@{data.sendSelf ? @dimen/chat_no_margin : @dimen/chat_margin}"
+        android:gravity="@{data.sendSelf ? Gravity.RIGHT : Gravity.LEFT}">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@{data.sendSelf ? @color/lightblue : @color/white}"
+            app:elevation="0dp"
+            android:padding="5dp"
+            app:cardCornerRadius="3dp"
+            android:layout_margin="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <!-- Image Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    android:onClick="@{handlers.showImage}">
+
+                    <!-- I M A G E -->
+                    <ImageView
+                        android:id="@+id/chat_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility='@{data.type.equalsIgnoreCase("image") ? View.VISIBLE : View.GONE}'
+                        android:tag="@{data.message}"
+                        app:imagePath="@{data.url}"/>
+
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/chat_url"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:tag="@{data.url}"/>
+
+                </LinearLayout>
+
+
+                <!-- M E S S A G E -->
+                <TextView
+                    android:id="@+id/chat_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="@{data.url}"
+                    android:text="@{data.message}"
+                    android:textColor="@color/text_color"/>
+
+
+                <!-- T I M E -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{data.time}"
+                    android:textColor="@color/text_color"
+                    android:textSize="10sp"/>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</layout>

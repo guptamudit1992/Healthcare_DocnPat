@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Patient.Activity.Signup.WelcomeActivity">
+
+
+    <!-- W E L C O M E    S E C T I O N -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="5"
+        android:layout_above="@+id/cta"
+        android:padding="16dp"
+        android:gravity="center"
+        android:background="@color/white">
+
+        <!-- B A N N E R -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:scaleType="fitCenter"
+            android:gravity="center"
+            android:src="@drawable/welcome_banner"/>
+
+        <!-- C O N G R A T S    M E S S A G E -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/congrats"
+            android:gravity="center"
+            android:textSize="28sp"
+            android:textColor="@color/colorPrimary"/>
+
+        <!-- S U C C E S S    M E S S A G E -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:text="@string/logged"
+            android:textColor="#2B4e72"/>
+
+
+        <!-- D I V I D E R -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_margin="10dp"
+            android:background="#2B4e72" />
+
+
+        <!-- O N B O A R D I N G   M E S S A G E -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_onboarding_text"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textSize="14sp"
+            android:lineSpacingExtra="4sp"
+            android:textColor="#124c25"/>
+
+    </LinearLayout>
+
+
+    <!-- P R O C E E D   T O   O N B O A R D I N G -->
+    <android.support.v7.widget.CardView
+        android:id="@+id/cta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="6dp"
+        app:cardCornerRadius="5dp"
+        android:layout_margin="16dp"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/continue_onboarding"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:background="@color/hb_mp_card"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:padding="10dp"
+            android:gravity="center"
+            android:clickable="true"
+            android:onClick="gotoOnboarding"/>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

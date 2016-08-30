@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Patient.Activity.Onboarding.AppOnboardingActivity"
+    android:background="@color/white">
+
+    <!-- C A R D   S L I D E R   V I E W   P A G E R -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/content_home_view_pager_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomLayout"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <!-- V I E W   P A G E R   I N D I C A T O R -->
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/content_home_view_pager_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomLayout"
+        android:layout_marginBottom="2dp"/>
+
+
+    <!-- B O T T O M   S C R E E N -->
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <!-- S O C I A L   L O G I N    I C O N S -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:padding="20dp">
+
+            <!-- F A C E B O O K   L O G I N -->
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/fb_login_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"
+                android:elevation="2dp"
+                android:paddingTop="11dp"
+                android:paddingBottom="11dp"/>
+
+            <!-- G O O G L E   L O G I N -->
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/google_sign_in_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="15dp"/>
+
+        </LinearLayout>
+
+
+        <!-- S I G N U P / L O G I N -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:background="#939090"
+            android:paddingTop="0.1dp"
+            android:divider="@drawable/divider_dark"
+            android:showDividers="middle">
+
+            <!--- S I G N U P -->
+            <com.careons.app.Shared.Components.CustomFields.MonospaceTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/sign_up"
+                android:textColor="#282727"
+                android:textSize="13sp"
+                android:padding="10dp"
+                android:gravity="center"
+                android:onClick="signupRequest"
+                android:background="#eceded"/>
+
+            <!--- L O G I N -->
+            <com.careons.app.Shared.Components.CustomFields.MonospaceTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="login"
+                android:textAllCaps="true"
+                android:textSize="13sp"
+                android:padding="10dp"
+                android:textColor="#282727"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="loginRequest"
+                android:background="#eceded"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

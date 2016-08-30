@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- C O N T E N T -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <!-- L O A D E R -->
+        <include
+            layout="@layout/item_loader" />
+
+        <!-- N O   E N T R Y   C A S E -->
+        <TextView
+            android:id="@+id/vitals_bp_empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="25dp"
+            android:text="@string/vitals_bp_empty"
+            android:textSize="14sp"
+            android:visibility="gone"/>
+
+        <!-- R E C E N T   V I T A L S -->
+        <LinearLayout
+            android:id="@+id/vitals_bp_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- L I S T   O F   V I T A L S -->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/vitals_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <!-- C R E A T E   V I T A L   E N T R Y -->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_add_white" />
+
+</RelativeLayout>

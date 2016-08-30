@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <!-- T O O L B A R -->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/fh" />
+
+        <!-- S E A R C H   B A R -->
+        <LinearLayout
+            android:id="@+id/searchBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/fh"
+            android:orientation="horizontal"
+            android:padding="1dp"
+            android:weightSum="10">
+
+            <!-- S E A R C H   L A B E L -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="@color/fh"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/search"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+
+            <!-- S E A R C H   F I E L D -->
+            <EditText
+                android:id="@+id/editTextSearch"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:background="@color/white"
+                android:hint="@string/family_search_hint"
+                android:textColorHint="@color/hint_text_color"
+                android:padding="10dp"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- S E A R C H   C O N T E N T -->
+    <LinearLayout
+        android:id="@+id/middleLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchLayout"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <!-- L O A D E R -->
+        <include
+            layout="@layout/item_loader" />
+
+        <!-- E M P T Y   C O N T A I N E R -->
+        <TextView
+            android:id="@+id/empty_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:gravity="center"
+            android:text="@string/err_no_search_result"
+            android:lineSpacingExtra="5sp"
+            android:padding="15dp"
+            android:textColor="@color/text_color"/>
+
+        <!-- E R R O R   C O N T A I N E R -->
+        <TextView
+            android:id="@+id/error_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:gravity="center"
+            android:text="@string/err_error_search_result"
+            android:lineSpacingExtra="5sp"
+            android:padding="15dp"
+            android:textColor="@color/text_color"/>
+
+        <!-- I N T E R N E T   F A I L U R E   C O N T A I N E R -->
+        <TextView
+            android:id="@+id/internet_failure_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:gravity="center"
+            android:text="@string/err_internet_failure_search_result"
+            android:lineSpacingExtra="5sp"
+            android:padding="15dp"
+            android:textColor="@color/text_color"/>
+
+        <!-- S E A R C H   P R O B L E M S -->
+        <ListView
+            android:id="@+id/listViewSerachMP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <!-- D A T A -->
+
+            <LinearLayout
+                android:id="@+id/addLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/fh"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!-- P R O B L E M   I D -->
+                <TextView
+                    android:id="@+id/problem_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <!-- P R O B L E M   H Y P E R L I N K -->
+                <TextView
+                    android:id="@+id/problem_hyperlink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <!-- P R O B L E M   N A M E -->
+                <TextView
+                    android:id="@+id/problem_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="15dp"
+                    android:textColor="@color/fh"
+                    android:textSize="20sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <CheckBox
+                        android:id="@+id/checkbox1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.2"
+                        android:buttonTint="@color/white"
+                        android:text="@string/father"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/ageTitle1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:gravity="right"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:text="@string/age"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/age1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:gravity="left"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textCursorDrawable="@drawable/color_cursor_white"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <CheckBox
+                        android:id="@+id/checkbox2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.2"
+                        android:buttonTint="@color/white"
+                        android:text="@string/mother"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/ageTitle2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:gravity="right"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:text="@string/age"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/age2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:gravity="left"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textCursorDrawable="@drawable/color_cursor_white"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <CheckBox
+                        android:id="@+id/checkbox3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.2"
+                        android:buttonTint="@color/white"
+                        android:text="@string/brother"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/ageTitle3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:gravity="right"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:text="@string/age"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/age3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:gravity="left"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textCursorDrawable="@drawable/color_cursor_white"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <CheckBox
+                        android:id="@+id/checkbox4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.2"
+                        android:buttonTint="@color/white"
+                        android:text="@string/sister"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/ageTitle4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:gravity="right"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:text="@string/age"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/age4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:gravity="left"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textCursorDrawable="@drawable/color_cursor_white"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <CheckBox
+                        android:id="@+id/checkbox5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.2"
+                        android:buttonTint="@color/white"
+                        android:text="@string/grandfather"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/ageTitle5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:gravity="right"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:text="@string/age"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/age5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:gravity="left"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textCursorDrawable="@drawable/color_cursor_white"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <CheckBox
+                        android:id="@+id/checkbox6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.2"
+                        android:buttonTint="@color/white"
+                        android:text="@string/grandmother"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/ageTitle6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:gravity="right"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:text="@string/age"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/age6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:gravity="left"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textCursorDrawable="@drawable/color_cursor_white"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+
+                <!-- C O M M E N T S -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/fh"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/comments"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/rectangle_editfield"
+                        android:gravity="top|left"
+                        android:hint="@string/comments"
+                        android:textColorHint="@color/hint_text_color"
+                        android:inputType="textMultiLine"
+                        android:lines="8"
+                        android:maxLines="10"
+                        android:minLines="3"
+                        android:padding="10dp"
+                        android:maxLength="180"
+                        android:scrollbars="vertical"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <!-- S A V E -->
+                <TextView
+                    android:id="@+id/save_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/rectangle_editfield"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:elevation="2dp"
+                    android:text="@string/save_changes"
+                    android:textColor="@color/fh" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>
+

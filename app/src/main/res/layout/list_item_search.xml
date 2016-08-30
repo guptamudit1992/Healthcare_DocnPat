@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:gravity="start"
+    android:orientation="vertical"
+    android:padding="15dp" >
+
+    <!-- P R O B L E M   I D -->
+    <TextView
+        android:id="@+id/problem_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <!-- P R O B L E M   N A M E -->
+    <TextView
+        android:id="@+id/textViewProblemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="16dp"
+        android:layout_gravity="left"
+        android:textColor="@color/text_color"/>
+
+</LinearLayout>

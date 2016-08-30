@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/addMainRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/dispViewLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="10dp"
+            android:text="@string/select_the_source"
+            android:textColor="@color/hb_allergy"
+            android:textSize="15sp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/al"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <RadioButton
+                android:id="@+id/radioButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"
+                android:checked="true"
+                android:text="@string/allergy_food"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:buttonTint="@color/white"
+                android:checked="false"
+                android:text="@string/allergy_environment"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"
+                android:checked="false"
+                android:text="@string/allergy_medication"
+                android:textColor="@color/white" />
+        </RadioGroup>
+
+        <!-- List View -->
+        <ListView
+            android:id="@+id/listViewAddAllergy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dispViewLinearLayout">
+
+        <LinearLayout
+            android:id="@+id/addLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/hb_allergy"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:text="@string/allergy_type"
+                    android:textColor="@color/hb_allergy"
+                    android:textSize="15sp" />
+
+                <!-- A L L E R G Y  N A M E -->
+                <TextView
+                    android:id="@+id/allergyTypeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="right"
+                    android:padding="10dp"
+                    android:text=""
+                    android:textColor="@color/hb_allergy"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:text="@string/allergy_name"
+                    android:textColor="@color/hb_allergy"
+                    android:textSize="15sp" />
+
+                <!-- P R O B L E M   H Y P E R L I N K -->
+                <TextView
+                    android:id="@+id/problem_hyperlink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <!-- A L L E R G Y  N A M E -->
+                <TextView
+                    android:id="@+id/allergyNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="right"
+                    android:padding="10dp"
+                    android:text=""
+                    android:textColor="@color/hb_allergy"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:padding="10dp"
+                    android:text="@string/allergy_kind_of_reaction"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <Spinner
+                    android:id="@+id/kindOfReaction_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+            <!-- S T A R T   D A T E -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:padding="10dp"
+                    android:text="@string/allergy_since_when"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/date_textview"
+                    style="@android:style/Widget.EditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:drawableRight="@drawable/ic_white_datepicker"
+                    android:drawablePadding="10dp"
+                    android:background="@color/al"
+                    android:gravity="center_vertical|right"
+                    android:hint=""
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
+            <!-- C O M M E N T S -->
+            <EditText
+                android:id="@+id/commentsTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/rectangle_editfield"
+                android:gravity="top|left"
+                android:hint="@string/allergy_comments"
+                android:inputType="textMultiLine"
+                android:textColorHint="@color/hint_text_color"
+                android:lines="8"
+                android:maxLines="10"
+                android:minLines="3"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:textSize="14sp" />
+
+            <!-- S A V E -->
+            <TextView
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/rectangle_editfield"
+                android:clickable="true"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/save_changes"
+                android:textColor="@color/hb_allergy" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

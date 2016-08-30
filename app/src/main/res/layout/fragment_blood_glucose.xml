@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <!-- C H E C K U P   S E L E C T O R -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_grey"
+            android:padding="0.1dp"
+            android:layout_margin="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:divider="@drawable/divider_light"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:weightSum="9">
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.5"
+                    android:background="@color/mdtp_dark_gray"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/checkup"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/graph_random"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/random"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/graph_pre_meal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/pre_meal"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/graph_post_meal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/post_meal"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- L O A D E R -->
+        <include
+            layout="@layout/item_loader" />
+
+        <!-- N O   E N T R Y   C A S E -->
+        <TextView
+            android:id="@+id/vitals_bg_empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="25dp"
+            android:text="@string/vitals_bg_empty"
+            android:textSize="14sp"
+            android:visibility="gone"/>
+
+
+        <!-- R E C E N T   V I T A L S -->
+        <LinearLayout
+            android:id="@+id/vitals_bg_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- L I S T   O F   V I T A L S -->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/vitals_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!-- C R E A T E   V I T A L   E N T R Y -->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_add_white" />
+
+</RelativeLayout>
